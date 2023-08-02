@@ -1,0 +1,15 @@
+.nav-bar {
+  background: orange;
+  height: 50px;
+  padding: 10px;
+}
+
+.side-bar {
+  background: greenyellow;
+  height: 100%;
+}
+
+.contents-box {
+  background: skyblue;
+  height: 100%;
+}
