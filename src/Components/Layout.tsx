@@ -2,6 +2,8 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import NavBar from "./NavBar";
+import ContentArea from "./ContentArea";
+import SideBar from "./SideBar";
 
 const Layout = () => {
   return (
@@ -10,11 +12,11 @@ const Layout = () => {
         <NavBar />
       </Row>
       <Row>
-        <Col className="contents-box" sm={10}>
-          Contents
+        <Col className="contents-box" sm={9}>
+          <ContentArea />
         </Col>
-        <Col className="side-bar" sm={2}>
-          SideBar
+        <Col className="side-bar" sm={3}>
+          <SideBar />
         </Col>
       </Row>
     </Container>
