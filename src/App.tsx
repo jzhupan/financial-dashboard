@@ -15,22 +15,11 @@ function App() {
   const [error, setError] = useState('')
 
   useEffect(() => {
-    const fetchUsers = async () => {
-      try {
-        const res = await axios
-          .get<User[]>("https://jsonplaceholder.typicode.com/photos")
-        setUsers(res.data)
-      }
-      catch (err) {
-        setError((err as AxiosError).message)
-      }
-    } 
-
-    fetchUsers()
-    //get -> await promise -> res / err
-
-      // .then((res) => setUsers(res.data))
-      // .catch(err => setError(err.message))
+        axios
+          .get<User[]>("https://jsonplaceholder.typicode.com/users")
+          .then((res) => setUsers(res.data))
+          .catch((err) => setError(err.message))
+     
   }, []);
 
   return (
