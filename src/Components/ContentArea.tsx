@@ -1,5 +1,5 @@
 
-import CarouselBox from './CarouselBox'
+import CarouselBox from './CarouselBox';
 import StockGraphics from './StockGraphics';
 
 const ContentArea = () => {
@@ -8,8 +8,9 @@ const ContentArea = () => {
       <h1>
         ContentArea
       </h1>
-      <CarouselBox />
-      <StockGraphics/>
+    <CarouselBox />
+    <StockGraphics/>
+
     </div>
   );
 };
