@@ -1,14 +1,15 @@
-import React from "react";
-import { Carousel } from "react-bootstrap";
-import StockGraphics from "./StockGraphics";
+
+import CarouselBox from './CarouselBox'
+import StockGraphics from './StockGraphics';
 
 const ContentArea = () => {
   return (
     <div>
-      <h1>ContentArea</h1>
-      <Carousel>
-        <StockGraphics />
-      </Carousel>
+      <h1>
+        ContentArea
+      </h1>
+      <CarouselBox />
+      <StockGraphics/>
     </div>
   );
 };

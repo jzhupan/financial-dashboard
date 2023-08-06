@@ -1,27 +1,28 @@
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+
+import { useEffect, useState } from "react";
+import axios from "axios";
+
+interface Photo {
+  id: number;
+  title: string;
+  url: string;
+  thumbnailUrl: string;
+}
 
 const StockGraphics = () => {
+  const [photos, setPhotos] = useState<Photo[]>([]);
+
+  useEffect(() => {
+    axios.get<Photo[]>('https://jsonplaceholder.typicode.com/albums/1/photos')
+    .then(res => setPhotos(res.data))
+  }, [])
+
   return (
-    <Container>
-      <Row>
-        <Col className="graphic-box" sm={4}>
-          Graphics 1
-        </Col>
-        <Col className="graphic-box" sm={4}>
-          Graphics 2
-        </Col>
-        <Col className="graphic-box" sm={4}>
-          Graphics 3
-        </Col>
-      </Row>
-      <Row>
-        <Col className="news-box" sm={12}>
-          News
-        </Col>
-      </Row>
-    </Container>
+    <>
+    <ul>
+      {photos.map(photo => <li key={photo.id}><img className="placeholder-img" src={photo.url}/></li>)}
+    </ul>
+    </>
   );
 };
 
