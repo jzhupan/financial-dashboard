@@ -5,21 +5,24 @@ import NavBar from "./NavBar";
 import ContentArea from "./ContentArea";
 import SideBar from "./SideBar";
 
+
 const Layout = () => {
   return (
-    <Container>
+
+    <Container fluid>
       <Row>
         <NavBar />
       </Row>
       <Row>
-        <Col className="contents-box" sm={9}>
+        <Col className="contents-box" sm={10}>
           <ContentArea />
         </Col>
-        <Col className="side-bar" sm={3}>
+        <Col className="side-bar" sm={2}>
           <SideBar />
         </Col>
       </Row>
     </Container>
+
   );
 };
 

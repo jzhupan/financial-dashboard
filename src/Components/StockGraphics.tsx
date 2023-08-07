@@ -20,7 +20,7 @@ const StockGraphics = () => {
   return (
     <>
     <ul>
-      {photos.map(photo => <li key={photo.id}><img className="placeholder-img" src={photo.url}/></li>)}
+      {photos.map(photo => <img className="placeholder-img" src={photo.url}/>)}
     </ul>
     </>
   );

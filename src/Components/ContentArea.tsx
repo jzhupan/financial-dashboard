@@ -1,17 +1,15 @@
 
-import CarouselBox from './CarouselBox';
-import StockGraphics from './StockGraphics';
+import Container from "react-bootstrap/Container";
+
+import ControlledCarousel from "./ControlledCarousel";
+
 
 const ContentArea = () => {
   return (
-    <div>
-      <h1>
-        ContentArea
-      </h1>
-    <CarouselBox />
-    <StockGraphics/>
+    <Container fluid>
+      <ControlledCarousel/>
 
-    </div>
+    </Container>
   );
 };
 
