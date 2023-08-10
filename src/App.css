@@ -33,8 +33,18 @@
 }
 
 .sidebar-container {
-  padding: 5px;
-  margin: 5px;
-  display: flex;
-  align-content: center;
+  margin: 5px 0 0 20px;
+  padding: 5px 0 5px 10px;
+  display: center;
+  
 }
+
+.news-row {
+  margin: 10px 0 10px 5px;
+
+}
+
+.news-col {
+  margin: 10px 0 10px 5px;
+}
+

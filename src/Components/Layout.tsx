@@ -4,6 +4,7 @@ import Col from "react-bootstrap/Col";
 import NavBar from "./NavBar";
 import ContentArea from "./ContentArea";
 import SideBar from "./SideBar";
+import NewsSection from "./NewsSection";
 
 
 const Layout = () => {
@@ -16,6 +17,7 @@ const Layout = () => {
       <Row>
         <Col className="contents-box" sm={10}>
           <ContentArea />
+          <NewsSection />
         </Col>
         <Col className="side-bar" sm={2}>
           <SideBar />
