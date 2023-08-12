@@ -7,6 +7,7 @@ import SideBar from "./SideBar";
 import NewsSection from "./NewsSection";
 
 
+
 const Layout = () => {
   return (
 
@@ -15,11 +16,11 @@ const Layout = () => {
         <NavBar />
       </Row>
       <Row>
-        <Col className="contents-box" sm={10}>
+        <Col className="contents-box" sm={9}>
           <ContentArea />
           <NewsSection />
         </Col>
-        <Col className="side-bar" sm={2}>
+        <Col className="side-bar" sm={3}>
           <SideBar />
         </Col>
       </Row>

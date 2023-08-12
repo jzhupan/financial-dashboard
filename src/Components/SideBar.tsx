@@ -2,35 +2,72 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
 import { useEffect, useState } from "react";
-//import * as StockList from '../assets/StockList.json'
 import axios from "axios";
 
-//const TenStockList = StockList.slice(0,10)
-//console.log(typeof TenStockList)
 
-export interface Gainer {
-  symbol: string;
-  name: string;
-  change: number;
-  changePercentage: number;
-  price: number;
+// interface User {
+//   id: number,
+//   name: string,
+// }
+// JSON.stringify(import.meta.env.VITE_REACT_APP_USERS_URL)
 
+
+// const SideBar = () => {
+//      const [users, setUsers] = useState<User[]>([])
+    
+//      useEffect(() => {
+//       axios.get<User[]>((import.meta.env.VITE_REACT_APP_USERS_URL))
+//         .then((res) => {
+          
+//          setUsers(res.data)})
+//         .catch((error) => {
+//           if(error.response) {
+//             console.log(error.response.data)
+//           }
+//         })
+//      }, [])
+
+//   return (
+//     // <Container className="sidebar-container" fluid>
+      
+//     // </Container>
+//     <ul>
+//       {users.map(user => <li key={user.id}>{user.name}</li>)}
+//     </ul>
+//   );
+// };
+
+//const myUrl = (import.meta.env.VITE_REACT_APP_BASE_URL)
+
+ interface Gainer {
+  symbol: string,
+  id: number,
+  changesPercentage: number,
+  price: number
 }
 
+
 const SideBar = () => {
-     const [gainersList, setGainersList] = useState([])
+     const [mostGainers, setMostGainers] = useState<Gainer[]>([])
     
      useEffect(() => {
-      axios.get('https://financialmodelingprep.com/api/v3/stock_market/gainers?apikey=ba2ee6b27eb00ef8fa8f9c9d556a82bb')
-        .then(res => {
-          setGainersList(res.data.slice(0,10))})
-     })
+      axios.get<Gainer[]>((import.meta.env.VITE_REACT_APP_BASE_URL))
+        .then((res) => {
+          setMostGainers(res.data.slice(0,10))})
+     }, [])
 
   return (
     <Container className="sidebar-container" fluid>
-      {}
+      {mostGainers.map(mostGainer => 
+      <Row>
+        <Col><h6>{mostGainer.symbol}</h6></Col>
+        <Col><h6>{mostGainer.changesPercentage.toFixed(2)}%</h6></Col>
+        <Col><h6>${mostGainer.price}</h6></Col>
+      </Row>)}
     </Container>
+
   );
 };
+
 
 export default SideBar;

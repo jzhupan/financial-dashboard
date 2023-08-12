@@ -1,0 +1,352 @@
+[
+    {
+    "symbol": "AMRS",
+    "name": "Amyris, Inc.",
+    "change": 0.071,
+    "price": 0.1369,
+    "changesPercentage": 107.739
+    },
+    {
+    "symbol": "ZXZZT",
+    "name": "",
+    "change": 11.85,
+    "price": 24,
+    "changesPercentage": 97.5309
+    },
+    {
+    "symbol": "IRNT",
+    "name": "IronNet, Inc.",
+    "change": 0.0486,
+    "price": 0.1,
+    "changesPercentage": 94.5525
+    },
+    {
+    "symbol": "MIMO",
+    "name": "Airspan Networks Holdings Inc.",
+    "change": 0.1283,
+    "price": 0.282,
+    "changesPercentage": 83.4743
+    },
+    {
+    "symbol": "TSAT",
+    "name": "Telesat Corporation",
+    "change": 4.52,
+    "price": 12.97,
+    "changesPercentage": 53.4911
+    },
+    {
+    "symbol": "GNS",
+    "name": "Genius Group Limited",
+    "change": 0.375,
+    "price": 1.19,
+    "changesPercentage": 46.0123
+    },
+    {
+    "symbol": "RGTI",
+    "name": "Rigetti Computing, Inc.",
+    "change": 0.64,
+    "price": 2.28,
+    "changesPercentage": 39.0244
+    },
+    {
+    "symbol": "ETON",
+    "name": "Eton Pharmaceuticals, Inc.",
+    "change": 0.99,
+    "price": 3.59,
+    "changesPercentage": 38.0769
+    },
+    {
+    "symbol": "IZM",
+    "name": "ICZOOM Group Inc.",
+    "change": 2.74,
+    "price": 11.25,
+    "changesPercentage": 32.1974
+    },
+    {
+    "symbol": "EVLV",
+    "name": "Evolv Technologies Holdings, Inc.",
+    "change": 1.82,
+    "price": 7.65,
+    "changesPercentage": 31.2178
+    },
+    {
+    "symbol": "OUST",
+    "name": "Ouster, Inc.",
+    "change": 1.51,
+    "price": 6.61,
+    "changesPercentage": 29.6078
+    },
+    {
+    "symbol": "ATER",
+    "name": "Aterian, Inc.",
+    "change": 0.0996,
+    "price": 0.4376,
+    "changesPercentage": 29.4675
+    },
+    {
+    "symbol": "MPTI",
+    "name": "M-tron Industries, Inc.",
+    "change": 3.1475,
+    "price": 14.4475,
+    "changesPercentage": 27.854
+    },
+    {
+    "symbol": "GRPN",
+    "name": "Groupon, Inc.",
+    "change": 1.895,
+    "price": 9.49,
+    "changesPercentage": 24.9506
+    },
+    {
+    "symbol": "LTRY",
+    "name": "Lottery.com Inc.",
+    "change": 1.26,
+    "price": 6.33,
+    "changesPercentage": 24.8521
+    },
+    {
+    "symbol": "TWOU",
+    "name": "2U, Inc.",
+    "change": 0.77,
+    "price": 3.89,
+    "changesPercentage": 24.6795
+    },
+    {
+    "symbol": "INOD",
+    "name": "Innodata Inc.",
+    "change": 2.63,
+    "price": 13.34,
+    "changesPercentage": 24.5565
+    },
+    {
+    "symbol": "VCIG",
+    "name": "VCI Global Limited",
+    "change": 0.62,
+    "price": 3.32,
+    "changesPercentage": 22.963
+    },
+    {
+    "symbol": "XFOR",
+    "name": "X4 Pharmaceuticals, Inc.",
+    "change": 0.23,
+    "price": 1.28,
+    "changesPercentage": 21.9048
+    },
+    {
+    "symbol": "HKIT",
+    "name": "Hitek Global Inc.",
+    "change": 2.34,
+    "price": 13.39,
+    "changesPercentage": 21.1765
+    },
+    {
+    "symbol": "ALTI",
+    "name": "AlTi Global, Inc.",
+    "change": 1.39,
+    "price": 7.98,
+    "changesPercentage": 21.0926
+    },
+    {
+    "symbol": "MYMD",
+    "name": "MyMD Pharmaceuticals, Inc.",
+    "change": 0.25,
+    "price": 1.44,
+    "changesPercentage": 21.0084
+    },
+    {
+    "symbol": "PAVS",
+    "name": "Paranovus Entertainment Technology Ltd.",
+    "change": 0.3735,
+    "price": 2.18,
+    "changesPercentage": 20.6753
+    },
+    {
+    "symbol": "VFF",
+    "name": "Village Farms International, Inc.",
+    "change": 0.145,
+    "price": 0.85,
+    "changesPercentage": 20.5674
+    },
+    {
+    "symbol": "APYX",
+    "name": "Apyx Medical Corporation",
+    "change": 0.845,
+    "price": 5.05,
+    "changesPercentage": 20.0951
+    },
+    {
+    "symbol": "APLS",
+    "name": "Apellis Pharmaceuticals, Inc.",
+    "change": 5.38,
+    "price": 32.39,
+    "changesPercentage": 19.9185
+    },
+    {
+    "symbol": "HOLO",
+    "name": "MicroCloud Hologram Inc.",
+    "change": 0.52,
+    "price": 3.21,
+    "changesPercentage": 19.3309
+    },
+    {
+    "symbol": "APRN",
+    "name": "Blue Apron Holdings, Inc.",
+    "change": 1,
+    "price": 6.22,
+    "changesPercentage": 19.1571
+    },
+    {
+    "symbol": "NN",
+    "name": "NextNav Inc.",
+    "change": 0.72,
+    "price": 4.5,
+    "changesPercentage": 19.0476
+    },
+    {
+    "symbol": "S&J.BK",
+    "name": "SentinelOne, Inc.",
+    "change": 8,
+    "price": 50.75,
+    "changesPercentage": 18.7135
+    },
+    {
+    "symbol": "AATC",
+    "name": "Autoscope Technologies Corporation",
+    "change": 0.82,
+    "price": 5.28,
+    "changesPercentage": 18.3857
+    },
+    {
+    "symbol": "SMSI",
+    "name": "Smith Micro Software, Inc.",
+    "change": 0.25,
+    "price": 1.67,
+    "changesPercentage": 17.6056
+    },
+    {
+    "symbol": "KORE",
+    "name": "KORE Group Holdings, Inc.",
+    "change": 0.133,
+    "price": 0.903,
+    "changesPercentage": 17.2727
+    },
+    {
+    "symbol": "WHLRP",
+    "name": "Wheeler Real Estate Investment Trust, Inc.",
+    "change": 0.275,
+    "price": 1.895,
+    "changesPercentage": 16.9753
+    },
+    {
+    "symbol": "AZ",
+    "name": "A2Z Smart Technologies Corp.",
+    "change": 0.31,
+    "price": 2.15,
+    "changesPercentage": 16.8478
+    },
+    {
+    "symbol": "LODE",
+    "name": "Comstock Inc.",
+    "change": 0.0735,
+    "price": 0.5135,
+    "changesPercentage": 16.7045
+    },
+    {
+    "symbol": "FEXDR",
+    "name": "Fintech Ecosystem Development Corp.",
+    "change": 0.0195,
+    "price": 0.138,
+    "changesPercentage": 16.4783
+    },
+    {
+    "symbol": "ESGL",
+    "name": "Invesco ESG Revenue ETF",
+    "change": 0.44,
+    "price": 3.14,
+    "changesPercentage": 16.2963
+    },
+    {
+    "symbol": "NUTX",
+    "name": "Nutex Health, Inc.",
+    "change": 0.0502,
+    "price": 0.38,
+    "changesPercentage": 15.2213
+    },
+    {
+    "symbol": "TISI",
+    "name": "Team, Inc.",
+    "change": 1.37,
+    "price": 10.4,
+    "changesPercentage": 15.1716
+    },
+    {
+    "symbol": "EUDA",
+    "name": "EUDA Health Holdings Limited",
+    "change": 0.0849,
+    "price": 0.6499,
+    "changesPercentage": 15.0266
+    },
+    {
+    "symbol": "TNGX",
+    "name": "Tango Therapeutics, Inc.",
+    "change": 0.97,
+    "price": 7.51,
+    "changesPercentage": 14.8318
+    },
+    {
+    "symbol": "OPAD",
+    "name": "Offerpad Solutions Inc.",
+    "change": 1.46,
+    "price": 11.33,
+    "changesPercentage": 14.7923
+    },
+    {
+    "symbol": "PGY",
+    "name": "Pagaya Technologies Ltd.",
+    "change": 0.34,
+    "price": 2.65,
+    "changesPercentage": 14.7186
+    },
+    {
+    "symbol": "KAVL",
+    "name": "Kaival Brands Innovations Group, Inc.",
+    "change": 0.07,
+    "price": 0.55,
+    "changesPercentage": 14.5833
+    },
+    {
+    "symbol": "ARCE",
+    "name": "Arco Platform Limited",
+    "change": 1.74,
+    "price": 13.69,
+    "changesPercentage": 14.5607
+    },
+    {
+    "symbol": "KINS",
+    "name": "Kingstone Companies, Inc.",
+    "change": 0.17,
+    "price": 1.34,
+    "changesPercentage": 14.5299
+    },
+    {
+    "symbol": "RETO",
+    "name": "ReTo Eco-Solutions, Inc.",
+    "change": 0.44,
+    "price": 3.48,
+    "changesPercentage": 14.4737
+    },
+    {
+    "symbol": "VOR",
+    "name": "Vor Biopharma Inc.",
+    "change": 0.37,
+    "price": 2.94,
+    "changesPercentage": 14.3969
+    },
+    {
+    "symbol": "SYTA",
+    "name": "Siyata Mobile Inc.",
+    "change": 0.45,
+    "price": 3.6,
+    "changesPercentage": 14.2857
+    }
+    ]
