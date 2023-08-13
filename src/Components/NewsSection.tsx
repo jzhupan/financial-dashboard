@@ -1,8 +1,11 @@
 import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
+//import Col from 'react-bootstrap/Col'
 import Container from "react-bootstrap/Container";
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+// import TopNewsSample from '../assets/TopNewsSample.json'
+// const ReportSamples = require('../assets/TopNewsSample.json')
+
 
 // interface User {
 //   id: number,
@@ -36,7 +39,7 @@ import axios from 'axios';
 //   );
 // };
 
-interface News {
+interface TopNews {
     title: string,
     description: string,
     snippet: string,
@@ -44,59 +47,37 @@ interface News {
     imageUrl: string,
     published_at: string,
     source: string,
-    uuid: number
+
 }
 
 const NewsSection = () => {
-    const [topNews, setTopNews] = useState<News[]>([])
-
-    useEffect(() => {
-        axios.get<News[]>((import.meta.env.VITE_REACT_APP_NEWS_SAMPLES))
-        .then((res) => {
-            setTopNews(res.data)
-        })
-    })
+    const [topReports, setTopReports] = useState<TopNews[]>([])
+    
+     useEffect(() => {
+        axios.get<TopNews[]>((import.meta.env.VITE_REACT_APP_NEWS_SAMPLES_URL))
+            .then((res) => {
+            console.log(res.data)
+            setTopReports(res.data)})
+        
+     }, [])
 
   return (
-    <Container fluid className='news-container'>
-
-        {/* <Row className='news-row'>
-            <h1>News</h1>
-        </Row>
-        <Row className='news-row'>
-            <Col className='news-col'>
-                <img src="https://via.placeholder.com/200/3D1D73/0000FF" />
-            </Col>
-            <Col className='news-col'>
-                <h1>News title</h1>
-                <p>This is where the paragraph news</p>
-                <span>Date</span>
-
-            </Col>
-        </Row>
-        <Row className='news-row'>
-            <Col className='news-col'>
-                <img src="https://via.placeholder.com/200/3D1D73/0000FF" />
-            </Col>
-            <Col className='news-col'>
-                <h1>News title</h1>
-                <p>This is where the paragraph news</p>
-                <span>Date</span>
-
-            </Col>
-        </Row>
-        <Row className='news-row'>
-            <Col className='news-col'>
-                <img src="https://via.placeholder.com/200/3D1D73/0000FF" />
-            </Col>
-            <Col className='news-col'>
-                <h1>News title</h1>
-                <p>This is where the paragraph news</p>
-                <span>Date</span>
-            </Col>
-        </Row> */}
+    <Container className="sidebar-container" fluid>
+      {/* {topReports.map(topReport => <Row>
+        <Col key={topReport.uuid}><img src={topReport.imageUrl}/>{topReport.title}</Col>
+        <Col key={topReport.uuid}>{topReport.snippet}</Col>
+        <Col key={topReport.uuid}>{topReport.url} {topReport.source}</Col>
+        <Col key={topReport.uuid}>{topReport.published_at}</Col>
+      </Row>)} */}
+      {topReports.map(topReport => <Row key={topReport.title}>
+        <h1>{topReport.title}</h1>
+        <img src={topReport.imageUrl} />
+        <p>{topReport.snippet}</p>
+        <p>{topReport.url}</p>
+        <p>{topReport.published_at}</p>
+      </Row>)}
     </Container>
-  )
+  );
 }
 
 export default NewsSection
