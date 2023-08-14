@@ -1,42 +1,9 @@
 import Row from 'react-bootstrap/Row'
-//import Col from 'react-bootstrap/Col'
+import Col from 'react-bootstrap/Col'
 import Container from "react-bootstrap/Container";
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-// import TopNewsSample from '../assets/TopNewsSample.json'
-// const ReportSamples = require('../assets/TopNewsSample.json')
 
-
-// interface User {
-//   id: number,
-//   name: string,
-// }
-// JSON.stringify(import.meta.env.VITE_REACT_APP_USERS_URL)
-
-
-// const SideBar = () => {
-//      const [users, setUsers] = useState<User[]>([])
-    
-//      useEffect(() => {
-//       axios.get<User[]>((import.meta.env.VITE_REACT_APP_USERS_URL))
-//         .then((res) => {
-          
-//          setUsers(res.data)})
-//         .catch((error) => {
-//           if(error.response) {
-//             console.log(error.response.data)
-//           }
-//         })
-//      }, [])
-
-//   return (
-//     // <Container className="sidebar-container" fluid>
-      
-//     // </Container>
-//     <ul>
-//       {users.map(user => <li key={user.id}>{user.name}</li>)}
-//     </ul>
-//   );
 // };
 
 interface TopNews {
@@ -47,33 +14,30 @@ interface TopNews {
     imageUrl: string,
     published_at: string,
     source: string,
-
+    data: any,
 }
 
 const NewsSection = () => {
     const [topReports, setTopReports] = useState<TopNews[]>([])
-    
+    const [error, SetError] = useState('')
+
      useEffect(() => {
-        axios.get<TopNews[]>((import.meta.env.VITE_REACT_APP_NEWS_SAMPLES_URL))
+        axios.get<TopNews[]>(('../assets/TopTenNews.json'))
             .then((res) => {
-            console.log(res.data)
-            setTopReports(res.data)})
-        
+            const resultsData = res.data.data
+            setTopReports(resultsData)})
+            .catch(err => SetError(err.message))
      }, [])
 
   return (
     <Container className="sidebar-container" fluid>
-      {/* {topReports.map(topReport => <Row>
-        <Col key={topReport.uuid}><img src={topReport.imageUrl}/>{topReport.title}</Col>
-        <Col key={topReport.uuid}>{topReport.snippet}</Col>
-        <Col key={topReport.uuid}>{topReport.url} {topReport.source}</Col>
-        <Col key={topReport.uuid}>{topReport.published_at}</Col>
-      </Row>)} */}
+    {error && <p className='text-danger'>{error}</p>}
+
       {topReports.map(topReport => <Row key={topReport.title}>
-        <h1>{topReport.title}</h1>
-        <img src={topReport.imageUrl} />
+        <Col><h3>{topReport.title}</h3></Col>
+        <img className='image-news' src={topReport.imageUrl} alt="article-image" />
         <p>{topReport.snippet}</p>
-        <p>{topReport.url}</p>
+        <a href={`${topReport.url}`}>Click to read more...</a>
         <p>{topReport.published_at}</p>
       </Row>)}
     </Container>

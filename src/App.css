@@ -10,7 +10,7 @@
 
 .contents-box {
   background: skyblue;
-  height: 1000px;
+  height: 100%;
 }
 
 .placeholder-img {
@@ -48,3 +48,7 @@
   margin: 10px 0 10px 5px;
 }
 
+.image-news {
+  width: 50px;
+  height: 50px;
+}
