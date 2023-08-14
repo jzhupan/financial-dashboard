@@ -5,6 +5,8 @@ import NavBar from "./NavBar";
 import ContentArea from "./ContentArea";
 import SideBar from "./SideBar";
 import NewsSection from "./NewsSection";
+import SideBarTwo from "./SideBarTwo";
+import SideBarThree from "./SideBarThree";
 
 
 
@@ -22,6 +24,10 @@ const Layout = () => {
         </Col>
         <Col className="side-bar" sm={3}>
           <SideBar />
+          <br />
+          <SideBarTwo />
+          <br />
+          <SideBarThree />
         </Col>
       </Row>
     </Container>
