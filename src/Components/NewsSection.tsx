@@ -20,8 +20,18 @@ const NewsSection = () => {
     const [topReports, setTopReports] = useState<TopNews[]>([])
     const [error, SetError] = useState('')
 
-     useEffect(() => {
-        axios.get<TopNews[]>((import.meta.env.VITE_REACT_APP_FMP_ARTICLES))
+    //  useEffect(() => {
+    //     axios.get<TopNews[]>((import.meta.env.VITE_REACT_APP_FMP_ARTICLES))
+    //         .then((res) => {
+    //         const resultsData = res.data.content
+    //         //console.log(resultsData)
+    //         setTopReports(resultsData)
+    //     })
+    //         .catch(err => SetError(err.message))
+    //  }, [])
+
+    useEffect(() => {
+        axios.get<TopNews[]>(require('../assets/FMPArticles.json'))
             .then((res) => {
             const resultsData = res.data.content
             //console.log(resultsData)
@@ -36,11 +46,13 @@ const NewsSection = () => {
       {topReports.map(topReport => <Row key={topReport.title} className='news-section'>
         <Col>
         <h3>{topReport.title} </h3>
-        <h6>{topReport.date}</h6>
         </Col>
+        <Row>
+        <Col className='date-text'><h6>{topReport.date}</h6></Col>
+        </Row>
         <img className='image-news' src={topReport.image} alt="article-image" />
+        <Col><h6>Author: {topReport.author}</h6></Col>
         <p className='content-paragraph'>{topReport.content}</p>
-        <h6>Author:{topReport.author}</h6>
         <h6>Source:{topReport.site}</h6>
         <a href={`${topReport.link}`} target="_blank">Click to see full article...</a>
       </Row>)}

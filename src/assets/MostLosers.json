@@ -1,0 +1,352 @@
+[
+    {
+    "symbol": "CLEU",
+    "name": "China Liberal Education Holdings Limited",
+    "change": -1.74,
+    "price": 0.77,
+    "changesPercentage": -69.3227
+    },
+    {
+    "symbol": "ZXZZT",
+    "name": "",
+    "change": -11.87,
+    "price": 12.13,
+    "changesPercentage": -49.4583
+    },
+    {
+    "symbol": "MIMO",
+    "name": "Airspan Networks Holdings Inc.",
+    "change": -0.121,
+    "price": 0.161,
+    "changesPercentage": -42.9078
+    },
+    {
+    "symbol": "BTAI",
+    "name": "BioXcel Therapeutics, Inc.",
+    "change": -3.07,
+    "price": 4.33,
+    "changesPercentage": -41.4865
+    },
+    {
+    "symbol": "AMC",
+    "name": "AMC Entertainment Holdings, Inc.",
+    "change": -1.865,
+    "price": 3.395,
+    "changesPercentage": -35.4563
+    },
+    {
+    "symbol": "FATH",
+    "name": "Fathom Digital Manufacturing Corporation",
+    "change": -0.264,
+    "price": 0.5087,
+    "changesPercentage": -34.1659
+    },
+    {
+    "symbol": "AURC",
+    "name": "Aurora Acquisition Corp.",
+    "change": -12.52,
+    "price": 22.97,
+    "changesPercentage": -35.2775
+    },
+    {
+    "symbol": "PAVMZ",
+    "name": "PAVmed Inc",
+    "change": -0.035,
+    "price": 0.065,
+    "changesPercentage": -35
+    },
+    {
+    "symbol": "HE",
+    "name": "Hawaiian Electric Industries, Inc.",
+    "change": -10.97,
+    "price": 21.43,
+    "changesPercentage": -33.858
+    },
+    {
+    "symbol": "AIXI",
+    "name": "Xiao-I Corporation",
+    "change": -2.14,
+    "price": 4.97,
+    "changesPercentage": -30.0985
+    },
+    {
+    "symbol": "BSAQ",
+    "name": "Black Spade Acquisition Co",
+    "change": -4.41,
+    "price": 10.41,
+    "changesPercentage": -29.7571
+    },
+    {
+    "symbol": "FWAC",
+    "name": "Fifth Wall Acquisition Corp. III",
+    "change": -3.14,
+    "price": 7.65,
+    "changesPercentage": -29.101
+    },
+    {
+    "symbol": "AMRS",
+    "name": "Amyris, Inc.",
+    "change": -0.0388,
+    "price": 0.0981,
+    "changesPercentage": -28.3419
+    },
+    {
+    "symbol": "ESGL",
+    "name": "Invesco ESG Revenue ETF",
+    "change": -0.82,
+    "price": 2.32,
+    "changesPercentage": -26.1147
+    },
+    {
+    "symbol": "AGIL",
+    "name": "AgileThought, Inc.",
+    "change": -0.188,
+    "price": 0.541,
+    "changesPercentage": -25.7887
+    },
+    {
+    "symbol": "LTCH",
+    "name": "Latch, Inc.",
+    "change": -0.1881,
+    "price": 0.61,
+    "changesPercentage": -23.5685
+    },
+    {
+    "symbol": "PLAG",
+    "name": "Planet Green Holdings Corp.",
+    "change": -0.1732,
+    "price": 0.555,
+    "changesPercentage": -23.7847
+    },
+    {
+    "symbol": "CCM",
+    "name": "Concord Medical Services Holdings Limited",
+    "change": -0.261,
+    "price": 1.1,
+    "changesPercentage": -19.1771
+    },
+    {
+    "symbol": "SDA",
+    "name": "SunCar Technology Group Inc.",
+    "change": -3.15,
+    "price": 11.74,
+    "changesPercentage": -21.1551
+    },
+    {
+    "symbol": "IMCC",
+    "name": "IM Cannabis Corp.",
+    "change": -0.23,
+    "price": 0.88,
+    "changesPercentage": -20.7207
+    },
+    {
+    "symbol": "SVFD",
+    "name": "Save Foods, Inc.",
+    "change": -0.21,
+    "price": 0.82,
+    "changesPercentage": -20.3883
+    },
+    {
+    "symbol": "OSS",
+    "name": "One Stop Systems, Inc.",
+    "change": -0.47,
+    "price": 1.9,
+    "changesPercentage": -19.8312
+    },
+    {
+    "symbol": "TPHS",
+    "name": "Trinity Place Holdings Inc.",
+    "change": -0.07,
+    "price": 0.45,
+    "changesPercentage": -13.4615
+    },
+    {
+    "symbol": "BLIN",
+    "name": "Bridgeline Digital, Inc.",
+    "change": -0.2049,
+    "price": 0.9051,
+    "changesPercentage": -18.4595
+    },
+    {
+    "symbol": "SNCE",
+    "name": "Science 37 Holdings, Inc.",
+    "change": -0.081,
+    "price": 0.359,
+    "changesPercentage": -18.4091
+    },
+    {
+    "symbol": "AAMC",
+    "name": "Altisource Asset Management Corporation",
+    "change": -6.7,
+    "price": 30.8,
+    "changesPercentage": -17.8667
+    },
+    {
+    "symbol": "TUSK",
+    "name": "Mammoth Energy Services, Inc.",
+    "change": -0.955,
+    "price": 4.46,
+    "changesPercentage": -17.6362
+    },
+    {
+    "symbol": "JFBR",
+    "name": "Jeffs' Brands Ltd",
+    "change": -0.12,
+    "price": 0.57,
+    "changesPercentage": -17.3913
+    },
+    {
+    "symbol": "REE",
+    "name": "REE Automotive Ltd.",
+    "change": -0.0443,
+    "price": 0.2107,
+    "changesPercentage": -17.3725
+    },
+    {
+    "symbol": "XXII",
+    "name": "22nd Century Group, Inc.",
+    "change": -0.46,
+    "price": 2.29,
+    "changesPercentage": -16.7273
+    },
+    {
+    "symbol": "YELL",
+    "name": "Yellow Corporation",
+    "change": -0.31,
+    "price": 1.55,
+    "changesPercentage": -16.6667
+    },
+    {
+    "symbol": "SDPI",
+    "name": "Superior Drilling Products, Inc.",
+    "change": -0.2,
+    "price": 1.125,
+    "changesPercentage": -15.0943
+    },
+    {
+    "symbol": "ENTX",
+    "name": "Entera Bio Ltd.",
+    "change": -0.1167,
+    "price": 0.6143,
+    "changesPercentage": -15.9644
+    },
+    {
+    "symbol": "FPAY",
+    "name": "FlexShopper, Inc.",
+    "change": -0.19,
+    "price": 1.05,
+    "changesPercentage": -15.3226
+    },
+    {
+    "symbol": "ASCBR",
+    "name": "A SPAC II Acquisition Corporation",
+    "change": 0,
+    "price": 0.114,
+    "changesPercentage": 0
+    },
+    {
+    "symbol": "LOCL",
+    "name": "Local Bounti Corporation",
+    "change": -0.72,
+    "price": 3.52,
+    "changesPercentage": -16.9811
+    },
+    {
+    "symbol": "HUDAR",
+    "name": "Hudson Acquisition I Corp.",
+    "change": -0.0399,
+    "price": 0.23,
+    "changesPercentage": -14.7832
+    },
+    {
+    "symbol": "EBIX",
+    "name": "Ebix, Inc.",
+    "change": -2.46,
+    "price": 14.37,
+    "changesPercentage": -14.6168
+    },
+    {
+    "symbol": "WHLR",
+    "name": "Wheeler Real Estate Investment Trust, Inc.",
+    "change": -0.0699,
+    "price": 0.4086,
+    "changesPercentage": -14.6082
+    },
+    {
+    "symbol": "SRAX",
+    "name": "SRAX, Inc.",
+    "change": -0.055,
+    "price": 0.33,
+    "changesPercentage": -14.2857
+    },
+    {
+    "symbol": "GAN",
+    "name": "GAN Limited",
+    "change": -0.28,
+    "price": 1.7,
+    "changesPercentage": -14.1414
+    },
+    {
+    "symbol": "BGLC",
+    "name": "BioNexus Gene Lab Corp.",
+    "change": -0.145,
+    "price": 0.915,
+    "changesPercentage": -13.6792
+    },
+    {
+    "symbol": "MFH",
+    "name": "Mercurity Fintech Holding Inc.",
+    "change": -0.16,
+    "price": 1.61,
+    "changesPercentage": -9.0395
+    },
+    {
+    "symbol": "ACU",
+    "name": "Acme United Corporation",
+    "change": -5.07,
+    "price": 32.49,
+    "changesPercentage": -13.4984
+    },
+    {
+    "symbol": "ACRX",
+    "name": "AcelRx Pharmaceuticals, Inc.",
+    "change": -0.1186,
+    "price": 0.7615,
+    "changesPercentage": -13.4757
+    },
+    {
+    "symbol": "PKBO",
+    "name": "Peak Bio, Inc.",
+    "change": -0.102,
+    "price": 0.655,
+    "changesPercentage": -13.4742
+    },
+    {
+    "symbol": "EFSH",
+    "name": "1847 Holdings LLC",
+    "change": -0.0264,
+    "price": 0.1586,
+    "changesPercentage": -14.2703
+    },
+    {
+    "symbol": "EVTV",
+    "name": "Envirotech Vehicles, Inc.",
+    "change": -0.33,
+    "price": 2.13,
+    "changesPercentage": -13.4146
+    },
+    {
+    "symbol": "LICY",
+    "name": "Li-Cycle Holdings Corp.",
+    "change": -0.74,
+    "price": 4.75,
+    "changesPercentage": -13.479
+    },
+    {
+    "symbol": "BNGO",
+    "name": "Bionano Genomics, Inc.",
+    "change": -0.53,
+    "price": 3.46,
+    "changesPercentage": -13.2832
+    }
+    ]

@@ -45,7 +45,13 @@
 .news-section {
   margin: 5px 5px 20px 5px;
   padding: 5px;
+  text-align: left;
 }
+
+.date-text {
+  text-align: left;
+}
+
 .image-news {
   margin: 0 0 5px 0;
 }

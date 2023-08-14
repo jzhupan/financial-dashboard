@@ -18,11 +18,16 @@ import axios from "axios";
 const SideBarThree = () => {
     const [mostActives, setMostActives] = useState<Active[]>([])
     
+    // useEffect(() => {
+    //  axios.get<Active[]>((import.meta.env.VITE_REACT_APP_MOST_ACTIVE_URL))
+    //    .then((res) => {
+    //      setMostActives(res.data.slice(0,10))})
+    // }, [])
     useEffect(() => {
-     axios.get<Active[]>((import.meta.env.VITE_REACT_APP_MOST_ACTIVE_URL))
-       .then((res) => {
-         setMostActives(res.data.slice(0,10))})
-    }, [])
+        axios.get<Active[]>(require('../assets/MostActives.json'))
+          .then((res) => {
+            setMostActives(res.data.slice(0,10))})
+       }, [])
 
  return (
    <Container className="sidebar-container" fluid>
