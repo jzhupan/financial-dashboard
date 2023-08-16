@@ -4,7 +4,6 @@ import Container from "react-bootstrap/Container";
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
-// };
 
 interface TopNews {
     title: string,
@@ -20,18 +19,8 @@ const NewsSection = () => {
     const [topReports, setTopReports] = useState<TopNews[]>([])
     const [error, SetError] = useState('')
 
-    //  useEffect(() => {
-    //     axios.get<TopNews[]>((import.meta.env.VITE_REACT_APP_FMP_ARTICLES))
-    //         .then((res) => {
-    //         const resultsData = res.data.content
-    //         //console.log(resultsData)
-    //         setTopReports(resultsData)
-    //     })
-    //         .catch(err => SetError(err.message))
-    //  }, [])
-
-    useEffect(() => {
-        axios.get<TopNews[]>(require('../assets/FMPArticles.json'))
+     useEffect(() => {
+        axios.get<TopNews[]>((import.meta.env.VITE_REACT_APP_FMP_ARTICLES))
             .then((res) => {
             const resultsData = res.data.content
             //console.log(resultsData)
@@ -39,6 +28,7 @@ const NewsSection = () => {
         })
             .catch(err => SetError(err.message))
      }, [])
+
 
   return (
     <Container className="sidebar-container" fluid>

@@ -18,16 +18,12 @@ import axios from "axios";
 const SideBar = () => {
      const [mostGainers, setMostGainers] = useState<Gainer[]>([])
     
-    //  useEffect(() => {
-    //   axios.get<Gainer[]>((import.meta.env.VITE_REACT_APP_MOST_GAINERS_URL))
-    //     .then((res) => {
-    //       setMostGainers(res.data.slice(0,10))})
-    //  }, [])
-    useEffect(() => {
-      axios.get<Gainer[]>(require('../assets/MostGainers.json'))
+     useEffect(() => {
+      axios.get<Gainer[]>((import.meta.env.VITE_REACT_APP_MOST_GAINERS_URL))
         .then((res) => {
           setMostGainers(res.data.slice(0,10))})
      }, [])
+
 
   return (
     <Container className="sidebar-container" fluid>

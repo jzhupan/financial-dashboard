@@ -18,16 +18,12 @@ import axios from "axios";
 const SideBarTwo = () => {
     const [mostLosers, setMostLosers] = useState<Loser[]>([])
     
-    // useEffect(() => {
-    //  axios.get<Loser[]>((import.meta.env.VITE_REACT_APP_MOST_LOSERS_URL))
-    //    .then((res) => {
-    //      setMostLosers(res.data.slice(0,10))})
-    // }, [])
     useEffect(() => {
-        axios.get<Loser[]>(require('../assets/MostLosers.json'))
-          .then((res) => {
-            setMostLosers(res.data.slice(0,10))})
-       }, [])
+     axios.get<Loser[]>((import.meta.env.VITE_REACT_APP_MOST_LOSERS_URL))
+       .then((res) => {
+         setMostLosers(res.data.slice(0,10))})
+    }, [])
+
 
  return (
    <Container className="sidebar-container" fluid>
