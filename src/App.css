@@ -23,19 +23,6 @@ h2 {
   height: 50px;
 }
 
-.controlled-carousel-box {
-  padding: 10px;
-  align-content: center;
-  border-top: solid 1px lightgray;
-  border-bottom: solid 1px lightgray;
-}
-
-.carousel-control-next-icon:hover, .carousel-control-prev-icon:hover {
-  animation-fill-mode: both;
-  background-color: rgb(69, 255, 91);
-}
-
-
 .slide-text {
   margin: 5px;
 }
@@ -82,7 +69,6 @@ h4 {
   margin: auto;
   padding: auto;
   max-width: 100%;
-
 }
 
 .content-paragraph {
@@ -93,4 +79,25 @@ h4 {
 
 .news-text-box {
   margin: 15px 5px 15px 5px;
+}
+
+
+.controlled-carousel-box {
+  flex-direction: row;
+  padding: 10px;
+  align-content: center;
+  border-top: solid 1px lightgray;
+  border-bottom: solid 1px lightgray;
+
+}
+
+.carousel-control-next-icon:hover, .carousel-control-prev-icon:hover {
+  animation-fill-mode: both;
+  background-color: rgb(69, 255, 91);
+}
+
+.card-single {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
 }

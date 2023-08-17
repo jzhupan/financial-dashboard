@@ -2,8 +2,10 @@ import { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import SlideOne from './SlideOne';
 import SlideTwo from './SlideTwo';
-import SlideThree from './SlideThree';
+
 import Container from "react-bootstrap/Container";
+
+//import ChartsGroupCard from './ChartsGroupCard';
 
 
 const ControlledCarousel = () => {
@@ -14,19 +16,17 @@ const ControlledCarousel = () => {
   };
 
   return (
-    <Container fluid>
-      <Carousel activeIndex={index} onSelect={handleSelect} className='controlled-carousel-box'>
+
+      <Carousel className='controlled-carousel' activeIndex={index} onSelect={handleSelect}>
         <Carousel.Item>
         <SlideOne/>
         </Carousel.Item>
         <Carousel.Item>
           <SlideTwo />
         </Carousel.Item>
-        <Carousel.Item>
-          <SlideThree />
-        </Carousel.Item>
       </Carousel>
-    </Container>
+
+   
 
   )
 }

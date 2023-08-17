@@ -2,11 +2,12 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import NavBar from "./NavBar";
-import ContentArea from "./ContentArea";
+
 import SideBar from "./SideBar";
 import NewsSection from "./NewsSection";
 import SideBarTwo from "./SideBarTwo";
 import SideBarThree from "./SideBarThree";
+import ControlledCarousel from "./ControlledCarousel";
 
 
 
@@ -19,7 +20,7 @@ const Layout = () => {
       </Row>
       <Row>
         <Col className="contents-box" sm={9}>
-          <ContentArea />
+          <ControlledCarousel />
           <NewsSection />
         </Col>
         <Col className="side-bar" sm={3}>

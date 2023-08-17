@@ -30,9 +30,9 @@ const SideBarThree = () => {
       <h4>Most Actives</h4>
      {mostActives.map(mostActive => 
      <Row className="sidebar-rows">
-       <Col key={mostActive.symbol}>{mostActive.symbol}</Col>
-       <Col key={mostActive.symbol}>{mostActive.changesPercentage.toFixed(2)}%</Col>
-       <Col key={mostActive.symbol}>${mostActive.price}</Col>
+       <Col key={mostActive.id}>{mostActive.symbol}</Col>
+       <Col key={mostActive.id}>{mostActive.changesPercentage.toFixed(2)}%</Col>
+       <Col key={mostActive.id}>${mostActive.price}</Col>
      </Row>)}
    </Container>
 
