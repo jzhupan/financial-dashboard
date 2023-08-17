@@ -27,12 +27,12 @@ const SideBar = () => {
 
   return (
     <Container className="sidebar-container" fluid>
-      <h5>Most Gainers</h5>
+      <h4>Most Gainers</h4>
       {mostGainers.map(mostGainer => 
-      <Row>
-        <Col key={mostGainer.symbol}><h6>{mostGainer.symbol}</h6></Col>
-        <Col key={mostGainer.symbol}><h6>{mostGainer.changesPercentage.toFixed(2)}%</h6></Col>
-        <Col key={mostGainer.symbol}><h6>${mostGainer.price}</h6></Col>
+      <Row className="sidebar-rows">
+        <Col key={mostGainer.symbol}>{mostGainer.symbol}</Col>
+        <Col key={mostGainer.symbol}>{mostGainer.changesPercentage.toFixed(2)}%</Col>
+        <Col key={mostGainer.symbol}>${mostGainer.price}</Col>
       </Row>)}
     </Container>
 

@@ -27,13 +27,12 @@ const SideBarThree = () => {
 
  return (
    <Container className="sidebar-container" fluid>
-          <h5>Most Actives</h5>
-
+      <h4>Most Actives</h4>
      {mostActives.map(mostActive => 
-     <Row>
-       <Col key={mostActive.symbol}><h6>{mostActive.symbol}</h6></Col>
-       <Col key={mostActive.symbol}><h6>{mostActive.changesPercentage.toFixed(2)}%</h6></Col>
-       <Col key={mostActive.symbol}><h6>${mostActive.price}</h6></Col>
+     <Row className="sidebar-rows">
+       <Col key={mostActive.symbol}>{mostActive.symbol}</Col>
+       <Col key={mostActive.symbol}>{mostActive.changesPercentage.toFixed(2)}%</Col>
+       <Col key={mostActive.symbol}>${mostActive.price}</Col>
      </Row>)}
    </Container>
 

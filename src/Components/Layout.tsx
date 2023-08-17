@@ -13,7 +13,7 @@ import SideBarThree from "./SideBarThree";
 const Layout = () => {
   return (
 
-    <Container fluid>
+    <Container fluid className="container-box">
       <Row>
         <NavBar />
       </Row>
@@ -24,9 +24,7 @@ const Layout = () => {
         </Col>
         <Col className="side-bar" sm={3}>
           <SideBar />
-          <br />
           <SideBarTwo />
-          <br />
           <SideBarThree />
         </Col>
       </Row>

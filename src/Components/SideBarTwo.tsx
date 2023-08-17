@@ -27,12 +27,12 @@ const SideBarTwo = () => {
 
  return (
    <Container className="sidebar-container" fluid>
-          <h5>Most Losers</h5>
+          <h4>Most Losers</h4>
      {mostLosers.map(mostLoser => 
-     <Row>
-       <Col key={mostLoser.symbol}><h6>{mostLoser.symbol}</h6></Col>
-       <Col key={mostLoser.symbol}><h6>{mostLoser.changesPercentage.toFixed(2)}%</h6></Col>
-       <Col key={mostLoser.symbol}><h6>${mostLoser.price}</h6></Col>
+     <Row className="sidebar-rows">
+       <Col key={mostLoser.symbol}>{mostLoser.symbol}</Col>
+       <Col key={mostLoser.symbol}>{mostLoser.changesPercentage.toFixed(2)}%</Col>
+       <Col key={mostLoser.symbol}>${mostLoser.price}</Col>
      </Row>)}
    </Container>
 

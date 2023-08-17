@@ -3,48 +3,54 @@ import Col from 'react-bootstrap/Col'
 import Container from "react-bootstrap/Container";
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-
+import Card from 'react-bootstrap/Card';
+import ListGroup from 'react-bootstrap/ListGroup';
 
 interface TopNews {
-    title: string,
-    date: string,
-    content: any,
-    link: string,
-    image: string,
-    author: string,
-    site: string,
+  image: string,
+  publishedDate: string,
+  site: string,
+  text: string,
+  symbol: string,
+  ticker: string,
+  title: string,
+  url: string
 }
 
 const NewsSection = () => {
-    const [topReports, setTopReports] = useState<TopNews[]>([])
-    const [error, SetError] = useState('')
+  const [topReports, setTopReports] = useState<TopNews[]>([])
+  const [error, SetError] = useState('')
 
-     useEffect(() => {
-        axios.get<TopNews[]>((import.meta.env.VITE_REACT_APP_FMP_ARTICLES))
-            .then((res) => {
-            const resultsData = res.data.content
-            //console.log(resultsData)
-            setTopReports(resultsData)
-        })
-            .catch(err => SetError(err.message))
-     }, [])
+  useEffect(() => {
+    axios.get<TopNews[]>((import.meta.env.VITE_REACT_APP_STOCK_NEWS_URL))
+      .then((res) => {
+        const resultsData = res.data.slice(0, 10)
+        //console.log(resultsData)
+        setTopReports(resultsData)
+      })
+      .catch(err => SetError(err.message))
+  }, [])
 
 
   return (
-    <Container className="sidebar-container" fluid>
-    {error && <p className='text-danger'>{error}</p>}
-      {topReports.map(topReport => <Row key={topReport.title} className='news-section'>
+    <Container className="news-container" fluid>
+      <h2>Stock News</h2>
+      {error && <p className='text-danger'>{error}</p>}
+      {topReports.map(topReport => 
+        <Row key={topReport.ticker} className='news-section'>
+
         <Col>
-        <h3>{topReport.title} </h3>
+          <img className='image-news' src={topReport.image} alt="article-image" />
         </Col>
-        <Row>
-        <Col className='date-text'><h6>{topReport.date}</h6></Col>
-        </Row>
-        <img className='image-news' src={topReport.image} alt="article-image" />
-        <Col><h6>Author: {topReport.author}</h6></Col>
-        <p className='content-paragraph'>{topReport.content}</p>
-        <h6>Source:{topReport.site}</h6>
-        <a href={`${topReport.link}`} target="_blank">Click to see full article...</a>
+        <Col className='news-text-box'>
+        <h3>{topReport.title} </h3>
+
+        <h6>Published: {topReport.publishedDate}</h6>
+        <br />
+        <p className='content-paragraph'>"{topReport.text}"</p>
+        <br />
+        <h6>Source: {topReport.site}</h6>
+        <a href={`${topReport.url}`} target="_blank">Click to see full article...</a></Col>
       </Row>)}
     </Container>
   );
