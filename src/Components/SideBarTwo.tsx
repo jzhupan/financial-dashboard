@@ -30,9 +30,9 @@ const SideBarTwo = () => {
           <h4>Most Losers</h4>
      {mostLosers.map(mostLoser => 
      <Row className="sidebar-rows">
-       <Col key={mostLoser.id}>{mostLoser.symbol}</Col>
-       <Col key={mostLoser.id}>{mostLoser.changesPercentage.toFixed(2)}%</Col>
-       <Col key={mostLoser.id}>${mostLoser.price}</Col>
+       <Col className="sidebar-cols" key={mostLoser.id}>{mostLoser.symbol}</Col>
+       <Col className="sidebar-cols" key={mostLoser.id}>{mostLoser.changesPercentage.toFixed(2)}%</Col>
+       <Col className="sidebar-cols" key={mostLoser.id}>${mostLoser.price}</Col>
      </Row>)}
    </Container>
 

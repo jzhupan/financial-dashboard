@@ -6,9 +6,9 @@ import Stack from 'react-bootstrap/Stack';
 const SlideOne = () => {
   
   return (
-    <Container fluid>
+
         <ChartsGroupCard />
-    </Container>
+
   );
 };
 

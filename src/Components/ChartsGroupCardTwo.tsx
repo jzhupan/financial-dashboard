@@ -22,7 +22,7 @@ interface Stock {
   changesPercentage: number;
 }
 
-const ChartsGroupCard = () => {
+const ChartsGroupCardTwo = () => {
   const [priceChangeList, setPriceChangeList] = useState<Stock[]>([]);
   const [error, SetError] = useState("");
 
@@ -31,7 +31,7 @@ const ChartsGroupCard = () => {
       .get<Stock[]>(import.meta.env.VITE_REACT_APP_MARKET_MAJORS_INDEXES)
       .then((res) => {
         let tenStockPriceChange = res.data.slice(0, 10);
-        let topFiveStock = tenStockPriceChange.slice(0, 5);
+        let topFiveStock = tenStockPriceChange.slice(5, 10);
         //console.log(topFiveStock);
         setPriceChangeList(topFiveStock);
       })
@@ -66,4 +66,4 @@ const ChartsGroupCard = () => {
   );
 };
 
-export default ChartsGroupCard;
+export default ChartsGroupCardTwo;

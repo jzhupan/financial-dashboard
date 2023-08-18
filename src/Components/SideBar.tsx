@@ -30,9 +30,9 @@ const SideBar = () => {
       <h4>Most Gainers</h4>
       {mostGainers.map(mostGainer => 
       <Row className="sidebar-rows">
-        <Col key={mostGainer.id}>{mostGainer.symbol}</Col>
-        <Col key={mostGainer.id}>{mostGainer.changesPercentage.toFixed(2)}%</Col>
-        <Col key={mostGainer.id}>${mostGainer.price}</Col>
+        <Col className="sidebar-cols" key={mostGainer.id}>{mostGainer.symbol}</Col>
+        <Col className="sidebar-cols" key={mostGainer.id}>{mostGainer.changesPercentage.toFixed(2)}%</Col>
+        <Col className="sidebar-cols" key={mostGainer.id}>${mostGainer.price}</Col>
       </Row>)}
     </Container>
 

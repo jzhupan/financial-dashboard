@@ -1,20 +1,14 @@
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
+import ChartsGroupCardTwo from "./ChartsGroupCardTwo";
 
 
 const SlideTwo = () => {
   return (    
-    <Container fluid>
-    <Row>
-      <Col sm={3}>
-      <p className="slide-text" >2 A short paragraph with some descriptive text.</p>
-      </Col>
-      <Col>
-      <img className="slide-image" src="https://via.placeholder.com/200/3D1D73/FFFF00" />
-      </Col>
-    </Row>
-    </Container>
+
+        <ChartsGroupCardTwo />
+
   )
 }
 

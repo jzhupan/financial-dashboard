@@ -8,6 +8,8 @@ import NewsSection from "./NewsSection";
 import SideBarTwo from "./SideBarTwo";
 import SideBarThree from "./SideBarThree";
 import ControlledCarousel from "./ControlledCarousel";
+import SideBarFour from "./SideBarFour";
+import SideBarFive from "./SideBarFive";
 
 
 
@@ -19,14 +21,16 @@ const Layout = () => {
         <NavBar />
       </Row>
       <Row>
-        <Col className="contents-box" sm={9}>
+        <Col className="contents-box" sm={10}>
           <ControlledCarousel />
           <NewsSection />
         </Col>
-        <Col className="side-bar" sm={3}>
+        <Col className="side-bar" sm={2}>
           <SideBar />
           <SideBarTwo />
           <SideBarThree />
+          <SideBarFour />
+          <SideBarFive />
         </Col>
       </Row>
     </Container>
