@@ -45,16 +45,19 @@ const ChartsGroupCard = () => {
         <Col className="card-single" key={priceChange.symbol}>
           <Card  style={{ width: "15rem" }}>
             <Card.Body>
-              <Col>
-                <Card.Title>{priceChange.symbol.replace("^", "")} </Card.Title>
-                <Card.Text>${priceChange.price}</Card.Text>
+            <Col>
+                <Card.Img variant="right" src={"https://placehold.jp/100x50.png"} />
               </Col>
               <Col>
-                <Card.Img variant="right" src={"https://placehold.jp/50x50.png"} />
+                <Card.Title>{priceChange.symbol.replace("^", "")}</Card.Title>
+
               </Col>
+              
               <Col>
               <small>
-                {priceChange.price} ({priceChange.changesPercentage}%)
+                +{priceChange.price}$ 
+                <br />
+                ({priceChange.changesPercentage}%)
               </small>
               </Col>
             </Card.Body>

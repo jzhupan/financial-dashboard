@@ -26,7 +26,7 @@ const SideBarThree = () => {
 
 
  return (
-   <Container className="sidebar-container" fluid>
+   <Container className="sidebar-container" >
       <h4>Most Actives</h4>
      {mostActives.map(mostActive => 
      <Row className="sidebar-rows">

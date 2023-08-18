@@ -28,7 +28,7 @@ const SideBarFour = () => {
 
 
  return (
-   <Container className="sidebar-container" fluid>
+   <Container className="sidebar-container" >
       <h4>Stock List</h4>
      {mostActives.map(mostActive => 
      <Row className="sidebar-rows">

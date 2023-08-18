@@ -28,7 +28,7 @@ const SsymboleBarFive = () => {
 
 
  return (
-   <Container className="sidebar-container" fluid>
+   <Container className="sidebar-container" >
       <h4>Currencies</h4>
      {mostActives.map(mostActive => 
      <Row className="sidebar-rows">

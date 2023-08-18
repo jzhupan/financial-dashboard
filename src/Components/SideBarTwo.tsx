@@ -26,7 +26,7 @@ const SideBarTwo = () => {
 
 
  return (
-   <Container className="sidebar-container" fluid>
+   <Container className="sidebar-container" >
           <h4>Most Losers</h4>
      {mostLosers.map(mostLoser => 
      <Row className="sidebar-rows">

@@ -9,20 +9,15 @@ h2 {
   text-align: left;
 }
 .container {
-  margin: 10px;
-  padding-right: 20px;
-  max-width: fit-content;
+  max-width: 100%;
   max-height: fit-content;
 }
 
 .container-box{
   background-color: rgb(255, 255, 255);
-  padding: 1%;
-}
-
-.contents-box {
   max-height: 100%;
-  max-width: 100%;
+  max-width: 95%;
+  padding: auto;
 }
 
 .placeholder-img {
@@ -68,18 +63,12 @@ h4 {
   justify-content: center;
 }
 
-/* .sidebar-cols {
-  min-width: 280px;
-  font-size: small;
-} */
-
 .news-section.row {
-  margin: 5px 5px 20px 5px;
+  margin: 5px 15px 5px 0;
   padding: 5px;
   text-align: left;
   border-bottom: solid 1px lightgray;
 }
-
 
 .image-news {
   margin: auto;
@@ -98,7 +87,6 @@ h4 {
   min-width: 300px;
 }
 
-
 .controlled-carousel-box {
   flex-direction: row;
   align-content: center;
@@ -114,13 +102,13 @@ h4 {
   background-color: rgb(225, 225, 225);
   margin: 10px;
 }
-.carousel-container.container {
+.carousel-container {
   align-content: center; 
   align-items: center;
   display: inline-flex;
   max-height: 600px;
-  max-width: 2500px;
-justify-content: center;
+  max-width:max-content;
+ justify-content: center;
   padding: 0 10px 0 10px;
   flex-wrap: wrap;
 }
@@ -130,9 +118,10 @@ justify-content: center;
   max-width: 1700px;
 }
 .card-single {
-  align-items: center;
+  text-align: center;
+  align-content: center;
   display: inline-flex;
-  max-width: 200px;
+  max-width: 180px;
   padding: 5px;
   margin: 5px
 }  
