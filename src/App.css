@@ -94,20 +94,20 @@ h4 {
   border-bottom: solid 1px lightgray;
 }
 .carousel-inner {
-  padding: 0 100px 0 100px;
+  padding: 0 50px 0 50px;
   max-width: 1700px;
 }
 .carousel-control-next-icon, .carousel-control-prev-icon {
   animation-fill-mode: both;
   background-color: rgb(225, 225, 225);
-  margin: 10px;
+  margin: 0px;
 }
 .carousel-container {
   align-content: center; 
   align-items: center;
   display: inline-flex;
   max-height: 600px;
-  max-width:max-content;
+  max-width: max-content;
  justify-content: center;
   padding: 0 10px 0 10px;
   flex-wrap: wrap;
@@ -121,8 +121,7 @@ h4 {
   text-align: center;
   align-content: center;
   display: inline-flex;
-  max-width: 180px;
-  padding: 5px;
+  max-width: 250px;
   margin: 5px
 }  
 
