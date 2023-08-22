@@ -24,7 +24,7 @@ const ChartsGroupCard = () => {
       .then((res) => {
         let tenStockPriceChange = res.data.slice(0, 10);
         let topFiveStock = tenStockPriceChange.slice(0, 5);
-        //console.log(topFiveStock);
+        console.log(topFiveStock);
         setPriceChangeList(topFiveStock);
       })
       .catch((err) => SetError(err.message));
@@ -56,7 +56,7 @@ const ChartsGroupCard = () => {
               //       <Area type="monotone" dataKey="price" stroke="#8884d8" fill="#8884d8" />
               //     </AreaChart>
               // </ResponsiveContainer>
-                <ResponsiveContainer width="100%" height={100}>
+                <ResponsiveContainer width={200} height={100}>
                 <AreaChart
                   width={100}
                   height={50}

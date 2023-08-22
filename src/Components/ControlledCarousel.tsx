@@ -3,6 +3,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import Container from "react-bootstrap/Container";
 import ChartsGroupCard from './ChartsGroupCard';
 import ChartsGroupCardTwo from './ChartsGroupCardTwo';
+import HistoricalStocks from './HistoricalStocks';
 
 //import ChartsGroupCard from './ChartsGroupCard';
 
@@ -18,11 +19,12 @@ const ControlledCarousel = () => {
 
       <Carousel className='controlled-carousel' activeIndex={index} onSelect={handleSelect}>
         <Carousel.Item>
-          <ChartsGroupCard />
+          <HistoricalStocks />
+          {/* <ChartsGroupCard /> */}
         </Carousel.Item>
-        <Carousel.Item>
+        {/* <Carousel.Item>
           <ChartsGroupCardTwo />
-        </Carousel.Item>
+        </Carousel.Item> */}
       </Carousel>
 
    
