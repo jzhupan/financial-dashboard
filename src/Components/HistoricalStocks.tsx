@@ -17,7 +17,7 @@ interface StockPriceList {
 }
 
 const HistoricalStocks = () => {
-  const [stockList, setStockList] = useState<StockPriceList[]>([])
+  const [stockList, setStockList] = useState<any[]>([])
   const [error, SetError] = useState("");
   
   function timeConvert(timestamp){
@@ -29,7 +29,7 @@ const HistoricalStocks = () => {
 
   useEffect(() => {
     axios
-      .get<StockPriceList[]>(import.meta.env.VITE_REACT_APP_COMPANY_QUOTE)
+      .get<any[]>(import.meta.env.VITE_REACT_APP_COMPANY_QUOTE)
       .then((res) => {
         let OriginalRes = res.data
         let stockPriceLists = OriginalRes.map((OGRes) => (
@@ -42,6 +42,7 @@ const HistoricalStocks = () => {
            "timestamp": timeConvert(OGRes.timestamp) 
           }
        ))
+        console.log(stockPriceLists)
         setStockList(stockPriceLists)
       })
 
@@ -52,9 +53,9 @@ const HistoricalStocks = () => {
   return (
     <div>
       {error && <p className="text-danger">{error}</p>}
-      {/* {stockList.map((stock) => (
-        {stock. }
-      ))} */}
+      {stockList.map((stock) => (
+        <p>{stock.price}</p>
+      ))}
     </div>
   )
 }
