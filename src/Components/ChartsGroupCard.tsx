@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Col from "react-bootstrap/esm/Col";
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-
+import StockSymbols from "./StockSymbols";
 
 interface Stock {
   symbol: string,
@@ -30,37 +30,109 @@ const ChartsGroupCard = () => {
       .catch((err) => SetError(err.message));
   }, []);
   
- 
+  let funData = [
+    {
+      "name": "AAPL",
+      "symbol": "Apple",
+      "price": 30,
+      "changesPercentage": 5,
+
+      "prices": [
+        {
+          'timestamp': 1,
+          'price': 1
+        },
+        {
+          'timestamp': 1,
+          'price': 10
+        },
+        {
+          'timestamp': 1,
+          'price': 10
+        },
+        {
+          'timestamp': 1,
+          'price': 15
+        },
+        {
+          'timestamp': 1,
+          'price': 5
+        },
+        {
+          'timestamp': 1,
+          'price': 3
+        },
+        {
+          'timestamp': 1,
+          'price': 4
+        },
+        {
+          'timestamp': 1,
+          'price': 20
+        }
+      ]
+    },
+    {
+      "name": "GOOL",
+      "symbol": "Google",
+      "price": 30,
+      "changesPercentage": 17.2,
+      "prices": [
+        {
+          'timestamp': 1,
+          'price': 10
+        },
+        {
+          'timestamp': 1,
+          'price': 5
+        },
+        {
+          'timestamp': 1,
+          'price': 10
+        },
+        {
+          'timestamp': 1,
+          'price': 15
+        },
+        {
+          'timestamp': 1,
+          'price': 400
+        },
+        {
+          'timestamp': 1,
+          'price': 3
+        },
+        {
+          'timestamp': 1,
+          'price': 230
+        },
+        {
+          'timestamp': 1,
+          'price': 20
+        }
+      ]
+    },
+  ]
+  // let funData = StockSymbols
+  // console.log(funData)
   return (
     <Container className="carousel-container">      
       {error && <p className="text-danger">{error}</p>}
-      {priceChangeList.map((priceChange) =>(
 
-        <Col className="card-single" key={priceChange.symbol}>
+      {funData.map((cardInfo) =>(
+
+        <Col className="card-single" key={cardInfo.symbol}>
           <Card  style={{ width: "15rem" }}>
             <Card.Body>
             <Col className="chart">
                 {/* <Card.Img variant="right" src={"https://placehold.jp/100x50.png"} /> */}
 
-                {priceChangeList && priceChangeList.length > 0 && new Date(priceChange.timestamp) && (
-              //     <ResponsiveContainer width={200} height={100}>
-              //     <AreaChart
-              //       width={100}
-              //       height={50}
-              //       data={priceChangeList}
-              //     >
-              //       <CartesianGrid strokeDasharray="3 3" />
-              //       <XAxis dataKey="timestamp" />
-              //       <YAxis />
-              //       <Tooltip />
-              //       <Area type="monotone" dataKey="price" stroke="#8884d8" fill="#8884d8" />
-              //     </AreaChart>
-              // </ResponsiveContainer>
+                {priceChangeList && cardInfo && (
                 <ResponsiveContainer width={200} height={100}>
                 <AreaChart
                   width={100}
                   height={50}
-                  data={priceChangeList}
+                  data={cardInfo.prices}
                 >
                   <Area type="monotone" dataKey="price" stroke="#8884d8" fill="#8884d8" />
                 </AreaChart>
@@ -68,13 +140,13 @@ const ChartsGroupCard = () => {
                 )}   
               </Col>
               <Col>
-                <Card.Title>{priceChange.symbol.replace("^", "")}</Card.Title>
+                <Card.Title>{cardInfo.symbol.replace("^", "")}</Card.Title>
               </Col>
               <Col>
               <small>
-                +{priceChange.price}$ 
+                +{cardInfo.price}$ 
                 <br />
-                ({priceChange.changesPercentage}%)
+                ({cardInfo.changesPercentage}%)
               </small>
               </Col>
             </Card.Body>

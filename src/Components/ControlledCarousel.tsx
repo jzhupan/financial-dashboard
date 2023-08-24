@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import Container from "react-bootstrap/Container";
 import ChartsGroupCard from './ChartsGroupCard';
 import ChartsGroupCardTwo from './ChartsGroupCardTwo';
-import HistoricalStocks from './HistoricalStocks';
+
+import StockSymbols from './StockSymbols';
 
 //import ChartsGroupCard from './ChartsGroupCard';
 
@@ -19,7 +19,7 @@ const ControlledCarousel = () => {
 
       <Carousel className='controlled-carousel' activeIndex={index} onSelect={handleSelect}>
         <Carousel.Item>
-          <HistoricalStocks />
+          <StockSymbols />
           {/* <ChartsGroupCard /> */}
         </Carousel.Item>
         {/* <Carousel.Item>

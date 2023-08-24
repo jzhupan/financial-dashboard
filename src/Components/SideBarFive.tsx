@@ -15,7 +15,7 @@ import axios from "axios";
 }
 
 
-const SsymboleBarFive = () => {
+const SideBarFive = () => {
     const [mostActives, setMostActives] = useState<Active[]>([])
     
     useEffect(() => {
@@ -41,7 +41,7 @@ const SsymboleBarFive = () => {
  );
 };
 
-export default SsymboleBarFive
+export default SideBarFive
 
 
 
