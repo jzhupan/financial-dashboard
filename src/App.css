@@ -1,127 +1,38 @@
-
-.nav-bar {
-  height: 5%;
-  padding: 10px;
-  background-color: white;
-}
-
-h2 {
-  text-align: left;
-}
-.container {
-  max-width: 100%;
-  max-height: fit-content;
-}
-
-.container-box{
-  background-color: rgb(255, 255, 255);
-  max-height: 100%;
-  max-width: 95%;
-  padding: auto;
-}
-
-.placeholder-img {
-  width: 50px;
-  height: 50px;
-}
-
-.slide-text {
-  margin: 5px;
-}
-
-.slide-image {
-  align-items: center;
-  margin: 5px 5px 50px 0;
-}
-
-.side-bar {
-  border-top: solid 1px lightgray;
-  border-left: solid 1px lightgrey;
-  width: 100%;
-  max-height: max-content;
-  font-size: 18px;
-  flex-wrap: wrap;
-  justify-items: end;
-}
-
-h4 {
+.App {
   text-align: center;
 }
 
-.sidebar-container {
-  margin: 10px;
-  padding: 10px;
-  border-bottom: solid 1px lightgray;
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
 }
 
-.sidebar-rows {
-  min-width: 280px;
-  margin: 20px;
-  padding: 10px;
-  font-weight: 500;
-  font-size: small;
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
-.news-section.row {
-  margin: 5px 15px 5px 0;
-  padding: 5px;
-  text-align: left;
-  border-bottom: solid 1px lightgray;
+.App-link {
+  color: #61dafb;
 }
 
-.image-news {
-  margin: auto;
-  padding: auto;
-  max-width: 100%;
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
-
-.content-paragraph {
-  margin: auto;
-  padding: auto;
-  font-size: 18px;
-}
-
-.news-text-box {
-  margin: 15px 5px 15px 5px;
-  min-width: 300px;
-}
-
-.controlled-carousel-box {
-  flex-direction: row;
-  align-content: center;
-  border-top: solid 1px lightgray;
-  border-bottom: solid 1px lightgray;
-}
-.carousel-inner {
-  padding: 0 50px 0 50px;
-  max-width: 1700px;
-}
-.carousel-control-next-icon, .carousel-control-prev-icon {
-  animation-fill-mode: both;
-  background-color: rgb(225, 225, 225);
-  margin: 0px;
-}
-.carousel-container {
-  align-content: center; 
-  align-items: center;
-  display: inline-flex;
-  max-height: 600px;
-  max-width: max-content;
- justify-content: center;
-  padding: 0 10px 0 10px;
-  flex-wrap: wrap;
-}
-
-.carousel-item-box {
-  margin: auto;
-  max-width: 1700px;
-}
-.card-single {
-  text-align: center;
-  align-content: center;
-  display: inline-flex;
-  max-width: 250px;
-  margin: 5px
-}  
-
