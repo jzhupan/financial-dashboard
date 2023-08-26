@@ -9,7 +9,7 @@ const BodySection = () => {
   return (
           <>
           <CssBaseline />
-          <NewsAndSideBar />
+
           
           </>
   )
