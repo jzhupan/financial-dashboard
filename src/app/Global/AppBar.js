@@ -35,11 +35,16 @@ function ResponsiveAppBar() {
     setAnchorElUser(null);
   };
 
+  const MyLogo = () => {
+    return <img src={logoFMP} />
+  }
+
+
   return (
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <img src="../assets/logoFMP.png" />
+          <img src={MyLogo} />
           <Typography
             variant="h6"
             noWrap
@@ -128,7 +133,7 @@ function ResponsiveAppBar() {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                <Avatar alt="logo-fmp" src="../assets/logoFMP.png" />
               </IconButton>
             </Tooltip>
             <Menu
