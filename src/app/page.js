@@ -1,13 +1,18 @@
 'use client'
-
 import AppBar from "./Global/AppBar"
-import BodySection from "./Global/BodySection"
+import Container from '@mui/material/Container'
+import SideBarStocks from "./Global/SideBarStocks"
+import NewsSection from "./Global/NewsSection"
 
 export default function Home() {
   return (
-    <div>
+    <>
     <AppBar/>
-    <BodySection />
-    </div>
+    <Container>
+      <NewsSection />
+
+    </Container>
+    
+    </>
   )
 }
