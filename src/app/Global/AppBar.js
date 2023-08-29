@@ -11,7 +11,7 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import logoFMP from '../assets/logoFMP.png'
+
 
 const pages = ['Home', 'Markets', 'Education'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -35,16 +35,13 @@ function ResponsiveAppBar() {
     setAnchorElUser(null);
   };
 
-  const MyLogo = () => {
-    return <img src={logoFMP} />
-  }
 
 
   return (
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <img src={MyLogo} />
+          
           <Typography
             variant="h6"
             noWrap
