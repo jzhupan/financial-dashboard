@@ -1,5 +1,7 @@
 import './globals.css'
 import './page.module.css'
+import { styled } from '@mui/material/styles';
+
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
