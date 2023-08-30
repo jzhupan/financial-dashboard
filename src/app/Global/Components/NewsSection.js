@@ -5,7 +5,7 @@ import Box from '@mui/material/Box';
 import { styled } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
 import { useEffect, useState } from 'react';
-import { Container } from '@mui/material';
+
 import axios from 'axios';
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -29,24 +29,21 @@ const NewsSection = () => {
       axios.get(process.env.NEXT_PUBLIC_STOCK_NEWS_URL)
       .then((res) => { 
       const topFiveNews = res.data.slice(0, 5)
-      console.log(topFiveNews)
+      //console.log(topFiveNews)
       setTodaysNews(topFiveNews)
       })
       .catch(err => setError(err.message))
           
-      return () => {
-        todaysNews && setTodaysNews(topFiveNews)
-      }
 
     },[])
 
     
 
   return (
-    <Container className='news-container'>
+    <Box sx={{ maxwidth: 600, minWidth:200 }}>
         {error && <p className='text-danger'>{error}</p>}
         {todaysNews && todaysNews.map((news) => (
-          <Box sx={{ maxwidth: 600, minWidth:200 }}>
+          
             <Stack spacing={{ xs: 1, sm: 2 }} direction="row" useFlexGap flexWrap="wrap">
               <Item><h2>{news.title}</h2>
               <img src={news.image} />
@@ -57,10 +54,11 @@ const NewsSection = () => {
               </Item>
 
             </Stack>
-          </Box>
+          
         ))
         }
-    </Container>
+        </Box>
+
   )}
 
 export default NewsSection
