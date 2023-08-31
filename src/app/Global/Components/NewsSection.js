@@ -3,7 +3,6 @@ import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import { styled } from '@mui/material/styles';
-import Grid from '@mui/material/Grid';
 import { useEffect, useState } from 'react';
 
 import axios from 'axios';

@@ -1,0 +1,43 @@
+.animated-text-box {
+    position: relative;
+    display: block;
+    width: 1000px;
+    height: 100px;
+    margin-top: 1%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+/* .marquee {
+    position: absolute;
+    display: block;
+    margin: auto auto;
+    white-space: nowrap;
+    overflow: hidden;
+    min-width: 100%;
+    height: 100%;
+} */
+
+.marquee .animated-text {
+    display: inline-block;
+    padding-left: 100%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    -webkit-text-stroke: 1px greenyellow;
+    white-space: nowrap;
+    min-width: 100%;
+    height: 100%;
+    line-height: 140px;
+    font-size: 35px;
+    animation: marquee 8s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate(0, 0)
+    }
+    100% {
+        transform: translate(-100%, 0);
+    }
+}
