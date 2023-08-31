@@ -8,7 +8,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 
 
-const h4 = styled(Paper)(({ theme }) => ({
+const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
   ...theme.typography.body2,
   padding: theme.spacing(1),
@@ -32,20 +32,19 @@ function RealTimeStockPrices() {
 
   return (
     <div className='animated-text-box'>
-        {error && <p className='text-danger'>{error}</p>}
-      <Stack className='marquee'
-        direction={{ xs: 'column', sm: 'row' }}
-        spacing={{ xs: 1, sm: 2, md: 4 }}
+        <marquee direction="left" min-height="50px" behavior="scroll">
+        <Stack direction="row" spacing={20}
         >
-
-          {priceStocks.map((priceStock) => (
-          <h4 className='animated-text'>
-            {priceStock.symbol} {priceStock.price.toFixed(2)} {priceStock.changesPercentage.toFixed(2)}%
-          </h4>
+      {error && <p className='text-danger'>{error}</p>}
+      {priceStocks.map((priceStock) => (
+          <div>
+          <h3>
+          {priceStock.symbol} ${priceStock.price.toFixed(2)} {priceStock.changesPercentage.toFixed(2)}%
+          </h3>
+          </div>
           ))}
-
-      </Stack>
-
+        </Stack>
+        </marquee>  
     </div>
   );
 }

@@ -39,7 +39,7 @@ const NewsSection = () => {
     
 
   return (
-    <Box sx={{ maxwidth: 600, minWidth:200 }}>
+    <Box sx={{ maxwidth: '100vh', minWidth:200 }}>
         {error && <p className='text-danger'>{error}</p>}
         {todaysNews && todaysNews.map((news) => (
           
