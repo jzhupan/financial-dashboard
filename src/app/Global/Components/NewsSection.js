@@ -3,7 +3,6 @@ import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import { styled } from '@mui/material/styles';
-import Grid from '@mui/material/Grid';
 import { useEffect, useState } from 'react';
 
 import axios from 'axios';
@@ -40,7 +39,7 @@ const NewsSection = () => {
     
 
   return (
-    <Box sx={{ maxwidth: 600, minWidth:200 }}>
+    <Box sx={{ maxwidth: '100vh', minWidth:200 }}>
         {error && <p className='text-danger'>{error}</p>}
         {todaysNews && todaysNews.map((news) => (
           
