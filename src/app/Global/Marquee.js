@@ -21,10 +21,10 @@ function RealTimeStockPrices() {
   const [error, setError] = useState('')
 
   useEffect(() => {
-    axios.get(process.env.NEXT_PUBLIC_REAL_TIME_STOCK_PRICE_LIST)
+    axios.get(process.env.NEXT_PUBLIC_MARKET_MAJORS_INDEXES)
     .then((res) => {
-      let realTimeStockPrices = res.data
-      console.log(realTimeStockPrices)
+      let realTimeStockPrices = res.data.slice(0,20)
+      //console.log(realTimeStockPrices)
       setPriceStocks(realTimeStockPrices)
     })
   }, [])
@@ -33,13 +33,13 @@ function RealTimeStockPrices() {
   return (
     <div className='animated-text-box'>
         <marquee direction="left" min-height="50px" behavior="scroll">
-        <Stack direction="row" spacing={20}
+        <Stack direction="row" spacing={5}
         >
       {error && <p className='text-danger'>{error}</p>}
       {priceStocks.map((priceStock) => (
           <div>
           <h3>
-          {priceStock.symbol} ${priceStock.price.toFixed(2)} {priceStock.changesPercentage.toFixed(2)}%
+          {priceStock.symbol.replace(/[^a-zA-Z0-9]/g, '')} ${priceStock.price.toFixed(2)} {priceStock.changesPercentage.toFixed(2)}%
           </h3>
           </div>
           ))}
