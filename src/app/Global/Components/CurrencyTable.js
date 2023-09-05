@@ -27,7 +27,7 @@ export default function CurrencyTable() {
   },[])
 
   return (
-    <TableContainer sx={{ minWidth: 100 }} >
+    <TableContainer sx={{ minWidth: 100 }} fluid>
       {error && <p className='text-danger'>{error}</p>}
       <Table sx={{ maxWidth: 350 }} aria-label="simple table" align="center">
         <TableHead align="center">
