@@ -19,6 +19,7 @@ const Item = styled(Paper)(({ theme }) => ({
 
 
 const PageLayout = () => {
+
   return (
         <Box sx={{ 
           flexGrow: 1 , 
@@ -27,11 +28,12 @@ const PageLayout = () => {
           maxHeight: 3000,
           }}>
             <Grid container spacing={2}>
-                <Grid item xs={6} md={8}>
+                <Grid item xs={12} md={9}>
                 <Item><NewsSection /></Item>
                 </Grid>
-                <Grid item xs={6} md={4}>
-                <Item><MostGainersTable /></Item>
+                <Grid item xs={12} md={3}>
+                <Item><MostGainersTable />
+                </Item>
                 <Item><MostLosersTable /></Item>
                 <Item><MostActivesTable /></Item>
                 <Item><CurrencyTable /></Item>
