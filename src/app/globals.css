@@ -1,3 +1,19 @@
+h1{
+    color: black;
+}
+
+h2 {
+    color: black;
+    text-align: center;
+}
+.news-title{
+    text-align: left;
+}
+
+.side-bar-title{
+    text-align: center;
+}
+
 marquee {
     text-align: center;
     padding: 1%;
@@ -6,4 +22,10 @@ marquee {
 
 #search-bar {
     margin: 15px;
+}
+
+a:-webkit-any-link {
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
 }

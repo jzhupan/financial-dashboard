@@ -7,11 +7,10 @@ export default class Example extends PureComponent {
 
   render() {
     return (
-        <div style={{ height: this.props.componentHeight, width: this.componentWidth }}>
-    <ResponsiveContainer width="30%" height="60%">
+    <div style={{ height: this.props.componentHeight, width: this.componentWidth }} sx={{ display: 'inline-flex' }}>
+    <ResponsiveContainer width="100%" height="100%">
         <AreaChart
           width={this.props.width}
-          height={this.props.height}
           data={this.props.data}
           margin={{
             top: 10,
@@ -27,9 +26,7 @@ export default class Example extends PureComponent {
           <Area type="monotone" dataKey="close" stroke="#50C878" fill="#50C878" />
         </AreaChart>
       </ResponsiveContainer>
-
-
-        </div>
+      </div>
       
     );
   }

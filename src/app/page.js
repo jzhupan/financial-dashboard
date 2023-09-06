@@ -1,16 +1,16 @@
 'use client'
-import AppBar from "./Global/AppBar"
 
-import Marquee from "./Global/Marquee"
+import ResponsiveAppBar from "./Global/AppBar"
+import RealTimeStockPrices from "./Global/Marquee"
 import PageLayout from "./Global/PageLayout"
 
 
 export default function Home() {
   return (
     <>
-    <AppBar/>
-    <Marquee />
-    <PageLayout />
+  <ResponsiveAppBar />
+  <RealTimeStockPrices />
+  <PageLayout />
 
     </>
   )

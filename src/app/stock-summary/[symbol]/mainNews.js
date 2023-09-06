@@ -16,32 +16,29 @@ const Item = styled('div')(({ theme }) => ({
   textAlign: 'center',
 }));
 
-const NewsSection = () => {
-
-  const [todaysNews, setTodaysNews] = useState([])
+export const MainNews = (props) => {
+  const [tickerNews, setTickerNews] = useState([])
   const [error, setError] = useState('')
+  const ticker = props.symbol
+  const singleTickerNews = `https://financialmodelingprep.com/api/v3/stock_news?tickers=${ticker}&limit=50&apikey=${process.env.NEXT_PUBLIC_API_KEY}`
   
+  useEffect(() => {
+    axios.get(singleTickerNews)
+    .then((res) => {
+      //console.log(res.data.slice(0,10))
+      setTickerNews(res.data.slice(0,10))
+    })  
+    .catch(err => setError(err.message))
+  },[])
 
-    useEffect(() => {
-      axios.get(process.env.NEXT_PUBLIC_STOCK_NEWS_URL)
-      .then((res) => { 
-      const topFiveNews = res.data.slice(0, 10)
-      //console.log(topFiveNews)
-      setTodaysNews(topFiveNews)
-      })
-      .catch(err => setError(err.message))
-          
-    },[])
-
-    
 
   return (
     <Container maxWidth="false" >
-      <h1 className='news-title'>Latest News</h1>
-      <Divider />
-      <Box sx={{ maxwidth: '100vh',  alignItems: 'center'}}>
+      <h1 className='news-title'>Latest {ticker}'s News</h1>
+      <Divider />       
+      <Box sx={{ maxwidth: '100vh', alignItems: 'center'}}>
         {error && <p className='text-danger'>{error}</p>}
-        {todaysNews && todaysNews.map((news) => (
+        {tickerNews && tickerNews.map((news) => (
           <Grid container spacing={2} xs={{flexGrow: 1 }}>
           <Grid item xs={12} md={4}>
             <Item>
@@ -58,7 +55,6 @@ const NewsSection = () => {
           </Grid>
         ))}
         </Box>
-</Container>
-  )}
-
-export default NewsSection
+    </Container>
+  )
+}
