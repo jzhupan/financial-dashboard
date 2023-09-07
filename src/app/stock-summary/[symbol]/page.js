@@ -14,6 +14,7 @@ import MostGainersTable from '@/app/Global/Components/MostGainersTable';
 import CurrencyTable from '@/app/Global/Components/CurrencyTable';
 
 
+
 const Item = styled('div')(({ theme }) => ({
 
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -46,7 +47,6 @@ export default function Page({ params })  {
     <>
     <ResponsiveAppBar/>
     <RealTimeStockPrices />
-
       <Grid container spacing={2} xs={{flexGrow: 1 }}>
         <Grid item xs={12} md={9}>
           <Item >

@@ -8,7 +8,7 @@ import TableRow from "@mui/material/TableRow";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Skeleton from '@mui/material/Skeleton';
-import { DisplaySettings } from "@mui/icons-material";
+
 
 export default function MostLosersTable() {
   const [mostLosers, setMostLosers] = useState(false);

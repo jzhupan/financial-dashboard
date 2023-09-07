@@ -26,9 +26,22 @@ const NewsSection = () => {
     useEffect(() => {
       axios.get(process.env.NEXT_PUBLIC_STOCK_NEWS_URL)
       .then((res) => { 
-       
-      //console.log(res.data.slice(0, 10))
-      setTodaysNews(res.data.slice(0, 10))
+      
+      let news = []
+      let seenNews = []
+      for(let i = 0; i < res.data.length; i++){
+        if(!seenNews.includes(res.data[i].title)){
+          seenNews.push(res.data[i].title)
+          if(news.length === 10){
+            break
+          }
+          news.push(res.data[i])
+
+        }
+      }
+
+      setTodaysNews(news)
+      // console.log(res.data)
       })
       .catch(err => setError(err.message))
           

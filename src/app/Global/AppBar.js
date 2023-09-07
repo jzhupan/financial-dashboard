@@ -8,6 +8,13 @@ import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
+import { useRouter } from 'next/navigation';
+import axios from "axios";
+import { useState } from "react";
+
+
+
+
 import {
   createTheme,
   ThemeProvider,
@@ -66,6 +73,30 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export default function ResponsiveAppBar() {
+
+  let router = useRouter();
+
+  const [searchValid, setSearchValid] = useState(true);
+
+
+  function handleRedirect(event){
+
+
+    const historicalChartStock = `https://financialmodelingprep.com/api/v3/historical-chart/30min/${event.target.value}?apikey=${process.env.NEXT_PUBLIC_API_KEY}`
+
+      axios.get(historicalChartStock)
+      .then((res) => {
+
+        if(res.data.length > 1){
+          router.push(`/stock-summary/${event.target.value}`);
+        } else {
+          setSearchValid(false);
+        }
+
+      })
+      .catch(err => setError(err.message))
+  }
+
   return (
     <ThemeProvider theme={theme}>
     <Box sx={{ flexGrow: 1 }}>
@@ -95,8 +126,17 @@ export default function ResponsiveAppBar() {
               <SearchIcon />
             </SearchIconWrapper>
             <StyledInputBase
-              placeholder="Search…"
+              placeholder="Ticker Search"
               inputProps={{ 'aria-label': 'search' }}
+              onKeyUp={(event) =>{
+                setSearchValid(true);
+                if(event.code == "Enter"){
+                  handleRedirect(event)
+                }
+              }}
+              style={{
+                color: searchValid ? "black": "red",
+              }}
             />
           </Search>
         </Toolbar>
