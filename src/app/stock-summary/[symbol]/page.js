@@ -67,7 +67,7 @@ export default function Page({ params })  {
             <MainNews symbol={params.symbol}/>            
           </Item>
         </Grid>
-        <Grid item xs={12} md={3}>
+        <Grid item xs={12} md={3} sx={{paddingBottom: '15rem'}}>
                 <Item><MostGainersTable /></Item>
                 <Item><MostLosersTable /></Item>
                 <Item><MostActivesTable /></Item>

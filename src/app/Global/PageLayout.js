@@ -25,13 +25,12 @@ const PageLayout = () => {
           flexGrow: 1 , 
           display: 'grid',
           gridAutoFlow: 'row',
-          maxHeight: 3000,
           }}>
             <Grid container spacing={2}>
                 <Grid item xs={12} md={9}>
                 <Item><NewsSection /></Item>
                 </Grid>
-                <Grid item xs={12} md={3}>
+                <Grid item xs={12} md={3} sx={{paddingBottom: '15rem'}}>
                 <Item><MostGainersTable /></Item>
                 <Item><MostLosersTable /></Item>
                 <Item><MostActivesTable /></Item>
