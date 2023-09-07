@@ -12,7 +12,7 @@ import MostActivesTable from '@/app/Global/Components/MostActivesTable';
 import MostLosersTable from '@/app/Global/Components/MostLosersTable';
 import MostGainersTable from '@/app/Global/Components/MostGainersTable';
 import CurrencyTable from '@/app/Global/Components/CurrencyTable';
-import Skeleton from '@mui/material/Skeleton';
+
 
 const Item = styled('div')(({ theme }) => ({
 
@@ -68,7 +68,7 @@ export default function Page({ params })  {
           </Item>
         </Grid>
         <Grid item xs={12} md={3}>
-        <Item><MostGainersTable /></Item>
+                <Item><MostGainersTable /></Item>
                 <Item><MostLosersTable /></Item>
                 <Item><MostActivesTable /></Item>
                 <Item><CurrencyTable /></Item> 

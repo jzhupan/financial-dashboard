@@ -24,7 +24,7 @@ export const MainInfoGraph = (props) => {
     axios.get(singlePriceTarget)
     .then((res) => {
       const latestData = res.data.slice(0,5)
-      console.log(latestData)
+      //console.log(latestData)
       setStockInfo(latestData)
     })
     .catch(err => setError(err.message))
@@ -38,7 +38,7 @@ export const MainInfoGraph = (props) => {
           <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
             <TableHead >
               <TableRow>
-                <TableCell align='center'>Date</TableCell>
+                <TableCell align='left'>Date</TableCell>
                 <TableCell align="right">Revenue Growth</TableCell>        
                 <TableCell align="right">Gross Profit Growth</TableCell>
                 <TableCell align="right">Earnings Per Share Growth</TableCell>

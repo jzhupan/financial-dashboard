@@ -29,8 +29,10 @@ export default function CurrencyTable() {
   return mostCurrencies ? (
     <TableContainer sx={{ minWidth: 100 }} fluid>
       {error && <p className='text-danger'>{error}</p>}
-      <Table sx={{ maxWidth: 350, textAlign:"center" }} aria-label="simple table" align="center">
-        <TableHead sx={{textAlign:"center"}}>
+      <Table sx={{ maxWidth: 350, textAlign:"center" }} 
+      aria-label="simple table" 
+      align="center">
+        <TableHead >
           <TableRow>
             <h1>Currency</h1>
           </TableRow>

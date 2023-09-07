@@ -32,8 +32,7 @@ const PageLayout = () => {
                 <Item><NewsSection /></Item>
                 </Grid>
                 <Grid item xs={12} md={3}>
-                <Item><MostGainersTable />
-                </Item>
+                <Item><MostGainersTable /></Item>
                 <Item><MostLosersTable /></Item>
                 <Item><MostActivesTable /></Item>
                 <Item><CurrencyTable /></Item>
