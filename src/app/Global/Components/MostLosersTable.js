@@ -9,6 +9,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Skeleton from '@mui/material/Skeleton';
 
+
 export default function MostLosersTable() {
   const [mostLosers, setMostLosers] = useState(false);
   const [error, setError] = useState("");
@@ -25,14 +26,14 @@ export default function MostLosersTable() {
   }, []);
 
   return mostLosers ? (
-    <TableContainer sx={{ minWidth: 100 }}>
+    <TableContainer sx={{ minWidth: 100 }} fluid>
       {error && <p className="text-danger">{error}</p>}
       <Table
         sx={{ maxWidth: 350, textAlign: "center" }}
         aria-label="simple table"
         align="center"
       >
-        <TableHead sx={{ textAlign: "center" }}>
+        <TableHead >
           <TableRow>
             <h1>Most Losers</h1>
           </TableRow>

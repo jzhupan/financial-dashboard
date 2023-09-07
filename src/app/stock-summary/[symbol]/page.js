@@ -13,6 +13,8 @@ import MostLosersTable from '@/app/Global/Components/MostLosersTable';
 import MostGainersTable from '@/app/Global/Components/MostGainersTable';
 import CurrencyTable from '@/app/Global/Components/CurrencyTable';
 
+
+
 const Item = styled('div')(({ theme }) => ({
 
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -26,7 +28,7 @@ const Item = styled('div')(({ theme }) => ({
 
 export default function Page({ params })  {
   const ticker = params.symbol
-  const [stockdata, setStockData] = useState([])
+  const [stockData, setStockData] = useState(false)
   const [error, setError] = useState('')
     
   const historicalChartStock = `https://financialmodelingprep.com/api/v3/historical-chart/30min/${ticker}?apikey=${process.env.NEXT_PUBLIC_API_KEY}`
@@ -41,11 +43,10 @@ export default function Page({ params })  {
 
     },[])
 
-  return (
+  return  (
     <>
     <ResponsiveAppBar/>
     <RealTimeStockPrices />
-
       <Grid container spacing={2} xs={{flexGrow: 1 }}>
         <Grid item xs={12} md={9}>
           <Item >
@@ -55,7 +56,7 @@ export default function Page({ params })  {
         <Grid item xs={12} md={3}>
           <br/>
             <Example 
-              data={stockdata} 
+              data={stockData} 
               componentWidth={370}
               componentHeight={250}
             />
@@ -66,14 +67,13 @@ export default function Page({ params })  {
             <MainNews symbol={params.symbol}/>            
           </Item>
         </Grid>
-        <Grid item xs={12} md={3}>
-        <Item><MostGainersTable /></Item>
+        <Grid item xs={12} md={3} sx={{paddingBottom: '15rem'}}>
+                <Item><MostGainersTable /></Item>
                 <Item><MostLosersTable /></Item>
                 <Item><MostActivesTable /></Item>
                 <Item><CurrencyTable /></Item> 
         </Grid>
       </Grid>
-
     </>
-  )
+  ) 
 }

@@ -25,14 +25,14 @@ export default function MostGainersTable() {
   }, []);
 
   return mostGainers ? (
-    <TableContainer sx={{ minWidth: 100 }} align="center">
+    <TableContainer sx={{ minWidth: 100 }} fluid>
       {error && <p className="text-danger">{error}</p>}
       <Table
         sx={{ maxWidth: 350, textAlign: "center" }}
         aria-label="simple table"
         align="center"
       >
-        <TableHead sx={{ textAlign: "center" }}>
+        <TableHead >
           <TableRow>
             <h1>Most Gainers</h1>
           </TableRow>

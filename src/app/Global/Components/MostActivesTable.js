@@ -30,10 +30,10 @@ export default function MostActivesTable() {
 
 
   return mostActives ? (
-    <TableContainer sx={{ minWidth: 100 }} >
+    <TableContainer sx={{ minWidth: 100 }} fluid>
       {error && <p className='text-danger'>{error}</p>}
       <Table sx={{ maxWidth: 350, textAlign:"center" }} aria-label="simple table" align="center">
-        <TableHead sx={{textAlign:"center"}}>
+      <TableHead >
           <TableRow>
             <h1>Most Actives</h1>
           </TableRow>

@@ -1,24 +1,34 @@
 import * as React from 'react';
+import { styled } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
-import MenuItem from '@mui/material/MenuItem';
-
-import SearchIcon from '@mui/icons-material/Search';
-import { styled, alpha } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
+import MenuIcon from '@mui/icons-material/Menu';
+import SearchIcon from '@mui/icons-material/Search';
+import { useRouter } from 'next/navigation';
+import axios from "axios";
+import { useState } from "react";
 
-const logoImage = '../assets/logoFMP.png'
-const pages = ['Home', 'Markets', 'Education'];
-const settings = ['Profile', 'Account Settings', 'Dashboard', 'Logout'];
+
+
+
+import {
+  createTheme,
+  ThemeProvider,
+  alpha,
+} from '@mui/material/styles';
+import { teal, green } from '@mui/material/colors';
+
+
+const theme = createTheme({
+  palette: {
+    primary: green,
+    secondary: teal,
+  },
+});
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -62,163 +72,76 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
+export default function ResponsiveAppBar() {
 
-function ResponsiveAppBar() {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
+  let router = useRouter();
 
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
+  const [searchValid, setSearchValid] = useState(true);
 
 
+  function handleRedirect(event){
+
+
+    const historicalChartStock = `https://financialmodelingprep.com/api/v3/historical-chart/30min/${event.target.value}?apikey=${process.env.NEXT_PUBLIC_API_KEY}`
+
+      axios.get(historicalChartStock)
+      .then((res) => {
+
+        if(res.data.length > 1){
+          router.push(`/stock-summary/${event.target.value}`);
+        } else {
+          setSearchValid(false);
+        }
+
+      })
+      .catch(err => setError(err.message))
+  }
 
   return (
-    <AppBar position="static" className='app-bar'>
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
-         
-          {/* <img src={logoImage} style={{width: 16 , height: 16}}/> */}
+    <ThemeProvider theme={theme}>
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="static" >
+        <Toolbar>
+          <IconButton
+            size="large"
+            edge="start"
+            color="inherit"
+            aria-label="open drawer"
+            sx={{ mr: 2 }}
+          >
+            <MenuIcon />
+          </IconButton>
           <Typography
             variant="h6"
             noWrap
             component="a"
             href="/"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
+            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' }}}
+            style={{color: 'white'}}
           >
-          <h3>FMP</h3>
+            FMP
           </Typography>
-
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: 'block', md: 'none' },
-              }}
-            >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
-   
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-
-          </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
-              </Button>
-            ))}
-          </Box>
-
-          <Search id="search-bar">
+          <Search>
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
             <StyledInputBase
-              placeholder="Search…"
+              placeholder="Ticker Search"
               inputProps={{ 'aria-label': 'search' }}
+              onKeyUp={(event) =>{
+                setSearchValid(true);
+                if(event.code == "Enter"){
+                  handleRedirect(event)
+                }
+              }}
+              style={{
+                color: searchValid ? "black": "red",
+              }}
             />
           </Search>
-
-          <Box sx={{ flexGrow: 0}}>
-            <Tooltip title="Open settings">
-              <IconButton  onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar id="menu-icon" alt="logo-fmp" src="" />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu} style={{ marginTop: 5 }}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
-
         </Toolbar>
-      </Container>
-    </AppBar>
+      </AppBar>
+    </Box>
+    </ThemeProvider>
   );
 }
-export default ResponsiveAppBar;

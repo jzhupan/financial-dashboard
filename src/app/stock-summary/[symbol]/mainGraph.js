@@ -1,12 +1,12 @@
 import React, { PureComponent } from 'react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import Skeleton from '@mui/material/Skeleton';
 
 
 export default class Example extends PureComponent {
 
-
   render() {
-    return (
+     return this.props.data ? (
     <div style={{ height: this.props.componentHeight, width: this.componentWidth }} sx={{ display: 'inline-flex' }}>
     <ResponsiveContainer width="100%" height="100%">
         <AreaChart
@@ -27,7 +27,11 @@ export default class Example extends PureComponent {
         </AreaChart>
       </ResponsiveContainer>
       </div>
-      
+    ) : (
+      <>
+      <Skeleton variant="rectangular" width={this.width} height={292} />
+      <br />    
+      </>
     );
   }
 }
