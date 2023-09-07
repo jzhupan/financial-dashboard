@@ -8,11 +8,12 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import axios from 'axios';
 import { Divider } from '@mui/material';
+import Skeleton from '@mui/material/Skeleton';
 
 
 
 export const MainInfoGraph = (props) => {
-  const [stockInfo, setStockInfo] = useState([])
+  const [stockInfo, setStockInfo] = useState(false)
   const [error, setError] = useState('')
   const companySymbol = props.symbol
   const singlePriceTarget = `
@@ -29,7 +30,7 @@ export const MainInfoGraph = (props) => {
     .catch(err => setError(err.message))
   },[])
 
-  return (
+  return stockInfo ? (
 
       <TableContainer component={Paper}>
         <h3>{companySymbol}'s Stock Financial Score</h3>
@@ -96,7 +97,11 @@ export const MainInfoGraph = (props) => {
             ))}
           </Table>
       </TableContainer>
-    
-    
-  )
+  )  : (
+    <>
+    <br/>
+    <Skeleton variant="rectangular" width={1080} height={276}/>
+    <br />    
+    </>
+  );
 }

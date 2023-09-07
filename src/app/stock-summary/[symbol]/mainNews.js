@@ -4,6 +4,8 @@ import axios from 'axios';
 import Grid from '@mui/system/Unstable_Grid';
 import styled from '@mui/system/styled';
 import { Divider } from '@mui/material';
+import Skeleton from '@mui/material/Skeleton';
+
 
 
 const Item = styled('div')(({ theme }) => ({
@@ -17,7 +19,7 @@ const Item = styled('div')(({ theme }) => ({
 }));
 
 export const MainNews = (props) => {
-  const [tickerNews, setTickerNews] = useState([])
+  const [tickerNews, setTickerNews] = useState(false)
   const [error, setError] = useState('')
   const ticker = props.symbol
   const singleTickerNews = `https://financialmodelingprep.com/api/v3/stock_news?tickers=${ticker}&limit=50&apikey=${process.env.NEXT_PUBLIC_API_KEY}`
@@ -32,7 +34,7 @@ export const MainNews = (props) => {
   },[])
 
 
-  return (
+  return tickerNews ? (
     <Container maxWidth="false" >
       <h1 className='news-title'>Latest {ticker}'s News</h1>
       <Divider />       
@@ -46,15 +48,21 @@ export const MainNews = (props) => {
             </Item>       
           </Grid>
           <Grid item xs={12} md={8}>
-            <Item>
-            <h2>{news.title}</h2>
+            <Item style={{textAlign: 'left'}}>
+            <h2 style={{textAlign: 'left'}}>{news.title}</h2>
             <p width={800}>{news.text}</p>            
-            <a href={news.url}>See full article...</a>         
+            <a target='blank' href={news.url} style={{textDecoration: 'underline', color: 'blue'}}>See full article...</a>         
             </Item>   
           </Grid>
           </Grid>
         ))}
         </Box>
     </Container>
-  )
+  ) : (
+    <>
+    <Skeleton variant="rectangular" maxWidth={false} height={2160} />
+    <br />    
+    </>
+
+  );
 }

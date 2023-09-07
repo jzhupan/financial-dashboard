@@ -2,10 +2,10 @@ import * as React from 'react';
 import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
 import { styled } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { TableRow} from '@mui/material';
+import Skeleton from '@mui/material/Skeleton';
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -17,35 +17,49 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 function RealTimeStockPrices() {
-  const [ priceStocks, setPriceStocks] = useState([])
+  const [ priceStocks, setPriceStocks] = useState(false)
   const [error, setError] = useState('')
 
   useEffect(() => {
     axios.get(process.env.NEXT_PUBLIC_MARKET_MAJORS_INDEXES)
     .then((res) => {
-      let realTimeStockPrices = res.data.slice(0,20)
+      let realTimeStockPrices = res.data
       //console.log(realTimeStockPrices)
       setPriceStocks(realTimeStockPrices)
     })
   }, [])
 
 
-  return (
+  return priceStocks ? (
     <div className='animated-text-box'>
-        <marquee direction="left" min-height="50px" behavior="scroll">
-        <Stack direction="row" spacing={5}
+        <marquee direction="left" min-height="50px" behavior="scroll" >
+        <Stack direction="row" spacing={3}
         >
       {error && <p className='text-danger'>{error}</p>}
       {priceStocks.map((priceStock) => (
-          <div>
-          <h3>
-          {priceStock.symbol.replace(/[^a-zA-Z0-9]/g, '')} ${priceStock.price.toFixed(2)} {priceStock.changesPercentage.toFixed(2)}%
-          </h3>
-          </div>
+          <>
+          <TableRow component="th" >{priceStock.symbol.replace(/[^a-zA-Z0-9]/g, '')}</TableRow> 
+          <TableRow >${priceStock.price.toFixed(2)}</TableRow> 
+          <TableRow
+          style={{
+            color: `${priceStock.changesPercentage}`.includes("-")
+              ? "red"
+              : "green",
+          }}
+          >
+            {priceStock.changesPercentage.toFixed(2)}%
+            </TableRow>
+          </>
           ))}
         </Stack>
         </marquee>  
     </div>
+  ) : (
+    <>
+    <Skeleton variant="rectangular" maxWidth={false} height={51}/>
+    <br />    
+    </>
+
   );
 }
 

@@ -12,6 +12,7 @@ import MostActivesTable from '@/app/Global/Components/MostActivesTable';
 import MostLosersTable from '@/app/Global/Components/MostLosersTable';
 import MostGainersTable from '@/app/Global/Components/MostGainersTable';
 import CurrencyTable from '@/app/Global/Components/CurrencyTable';
+import Skeleton from '@mui/material/Skeleton';
 
 const Item = styled('div')(({ theme }) => ({
 
@@ -26,7 +27,7 @@ const Item = styled('div')(({ theme }) => ({
 
 export default function Page({ params })  {
   const ticker = params.symbol
-  const [stockdata, setStockData] = useState([])
+  const [stockData, setStockData] = useState(false)
   const [error, setError] = useState('')
     
   const historicalChartStock = `https://financialmodelingprep.com/api/v3/historical-chart/30min/${ticker}?apikey=${process.env.NEXT_PUBLIC_API_KEY}`
@@ -41,7 +42,7 @@ export default function Page({ params })  {
 
     },[])
 
-  return (
+  return  (
     <>
     <ResponsiveAppBar/>
     <RealTimeStockPrices />
@@ -55,7 +56,7 @@ export default function Page({ params })  {
         <Grid item xs={12} md={3}>
           <br/>
             <Example 
-              data={stockdata} 
+              data={stockData} 
               componentWidth={370}
               componentHeight={250}
             />
@@ -73,7 +74,6 @@ export default function Page({ params })  {
                 <Item><CurrencyTable /></Item> 
         </Grid>
       </Grid>
-
     </>
-  )
+  ) 
 }
