@@ -23,7 +23,7 @@ export const MainNews = (props) => {
   const [error, setError] = useState('')
   const ticker = props.symbol
   const singleTickerNews = `https://financialmodelingprep.com/api/v3/stock_news?tickers=${ticker}&limit=50&apikey=${process.env.NEXT_PUBLIC_API_KEY}`
-  
+  //console.log(tickerNews)
   useEffect(() => {
     axios.get(singleTickerNews)
     .then((res) => {
@@ -35,7 +35,9 @@ export const MainNews = (props) => {
 
 
   return tickerNews ? (
-    <Container maxWidth="false" >
+
+    tickerNews.length != 0 ? (
+      <Container maxWidth="false" >
       <h1 className='news-title'>Latest {ticker}'s News</h1>
       <Divider />       
       <Box sx={{ maxwidth: '100vh', alignItems: 'center'}}>
@@ -58,6 +60,13 @@ export const MainNews = (props) => {
         ))}
         </Box>
     </Container>
+    ) : (
+      <Container maxWidth="false" >
+      <h1 className='news-title'>No News for {ticker}</h1>
+      <Divider />       
+    </Container>
+    )
+
   ) : (
     <>
     <Skeleton variant="rectangular" maxWidth={false} height={2160} />

@@ -1,13 +1,16 @@
 import React, { PureComponent } from 'react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import Skeleton from '@mui/material/Skeleton';
+import TextField from '@mui/material/TextField'
 
 
 export default class Example extends PureComponent {
 
-  render() {
-     return this.props.data ? (
-    <div style={{ height: this.props.componentHeight, width: this.componentWidth }} sx={{ display: 'inline-flex' }}>
+  render() {  
+    return this.props.data ? (
+
+    this.props.data.length != 0 ?
+    (<div style={{ height: this.props.componentHeight, width: this.componentWidth }} sx={{ display: 'inline-flex' }}>
     <ResponsiveContainer width="100%" height="100%">
         <AreaChart
           width={this.props.width}
@@ -27,6 +30,14 @@ export default class Example extends PureComponent {
         </AreaChart>
       </ResponsiveContainer>
       </div>
+    ) : (
+      <div style={{ height: this.props.componentHeight, width: this.componentWidth , marginTop: '-35px' }} sx={{ display: 'inline-flex' }}>
+          <ResponsiveContainer width="100%" height="100%" style={{border: '1px dashed'}}>
+          <img src={`https://placehold.co/300x170?text=Graph+Not+Available`} />
+          </ResponsiveContainer>
+          </div>
+    )
+    
     ) : (
       <>
       <Skeleton variant="rectangular" width={this.width} height={292} />
