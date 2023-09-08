@@ -38,7 +38,11 @@ function RealTimeStockPrices() {
       {error && <p className='text-danger'>{error}</p>}
       {priceStocks.map((priceStock) => (
           <>
-          <TableRow component="th" >{priceStock.symbol.replace(/[^a-zA-Z0-9]/g, '')}</TableRow> 
+          <TableRow component="th" >
+          <a href={`/stock-summary/${priceStock.symbol.replace(/[^a-zA-Z0-9]/g, '')}`} underline="none">
+          {priceStock.symbol.replace(/[^a-zA-Z0-9]/g, '')}
+                </a>
+            </TableRow> 
           <TableRow >${priceStock.price.toFixed(2)}</TableRow> 
           <TableRow
           style={{
