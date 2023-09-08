@@ -103,5 +103,5 @@ export const MainInfoGraph = (props) => {
     <Skeleton variant="rectangular" width={1080} height={276}/>
     <br />    
     </>
-  );
+  ) 
 }
