@@ -1,34 +1,35 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# About my Financial Dashboard
 
-## Getting Started
+Actively enhancing proficiency in front-end technologies including JavaScript, HTML5, CSS3, React, Next.js, JSX syntax, Material UI, Recharts, and Financial Modeling Prep’s API.
+Practicing Web API integration using Axios by developing a dynamic Financial Dashboard.
 
-First, run the development server:
+## Key Acomplisments:
+  • Created a user-friendly Home page and dynamic router page. 
+  • The App displays daily stock data and other financial information from using the Financial Modeling Prep's API.
+  • Designed a feature-rich interface comprising:
+      • Navbar
+      • Search bar
+      • Marquee
+      • News section
+      • Info Table
+      • Stock Charts
+      • Sidebar 
+    That all include real-time stock data, such as prices, percentage changes, and other information regarding the perspective ticker.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Resources Used
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+[React](https://react.dev/)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+[Next.js](https://nextjs.org/docs)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+[Material UI](https://mui.com/material-ui/)
 
-## Learn More
+[Recharts](https://recharts.org/en-US/guide)
 
-To learn more about Next.js, take a look at the following resources:
+[Financial Modeling Prep](https://site.financialmodelingprep.com/developer/docs/)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+[Axios](https://www.npmjs.com/package/axios)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Author:
+-Jennie ZhuPan
