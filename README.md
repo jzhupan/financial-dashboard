@@ -3,14 +3,23 @@ I have been actively enhancing my proficiency in front-end technologies, which i
 
 ## Key Acomplisments:
   - Developed a user-friendly Home page and a dynamic router page.
+    
   - The application displays daily stock data and other financial information by utilizing the Financial Modeling Prep's API.
+    
   - Crafted a feature-rich interface that encompasses:
+    
      - Navbar
+
      - Search bar
+   
      - Marquee
+       
      - News section
+       
      - Info Table
+       
      - Stock Charts
+       
      - Sidebar
 All of these components incorporate real-time stock data, including prices, percentage changes, and other relevant information for the respective ticker.
 
