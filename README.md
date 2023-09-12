@@ -1,23 +1,20 @@
 # About my Financial Dashboard
-
-Actively enhancing proficiency in front-end technologies including JavaScript, HTML5, CSS3, React, Next.js, JSX syntax, Material UI, Recharts, and Financial Modeling Prep’s API.
-Practicing Web API integration using Axios by developing a dynamic Financial Dashboard.
+I have been actively enhancing my proficiency in front-end technologies, which include JavaScript, HTML5, CSS3, React, Next.js, JSX syntax, Material UI, Recharts, and Financial Modeling Prep’s API. Through this project, I had the opportunity to build a dynamic Financial Dashboard from scratch, practice API integration using Axios, resolve numerous CSS issues while working with Material UI components, and experiment with styling customization.
 
 ## Key Acomplisments:
-  • Created a user-friendly Home page and dynamic router page. 
-  • The App displays daily stock data and other financial information from using the Financial Modeling Prep's API.
-  • Designed a feature-rich interface comprising:
-      • Navbar
-      • Search bar
-      • Marquee
-      • News section
-      • Info Table
-      • Stock Charts
-      • Sidebar 
-    That all include real-time stock data, such as prices, percentage changes, and other information regarding the perspective ticker.
+  • Developed a user-friendly Home page and a dynamic router page.
+  • The application displays daily stock data and other financial information by utilizing the Financial Modeling Prep's API.
+  • Crafted a feature-rich interface that encompasses:
+     • Navbar
+     • Search bar
+     • Marquee
+     • News section
+     • Info Table
+     • Stock Charts
+     • Sidebar
+All of these components incorporate real-time stock data, including prices, percentage changes, and other relevant information for the respective ticker.
 
 ## Resources Used
-
 [React](https://react.dev/)
 
 [Next.js](https://nextjs.org/docs)
