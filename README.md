@@ -21,6 +21,7 @@ I have been actively enhancing my proficiency in front-end technologies, which i
      - Stock Charts
        
      - Sidebar
+       
 All of these components incorporate real-time stock data, including prices, percentage changes, and other relevant information for the respective ticker.
 
 ## Resources Used
