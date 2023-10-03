@@ -72,6 +72,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export default function ResponsiveAppBar() {
+  
 
   let router = useRouter();
 
