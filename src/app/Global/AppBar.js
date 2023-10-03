@@ -6,7 +6,6 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
-import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import { useRouter } from 'next/navigation';
 import axios from "axios";
@@ -102,19 +101,26 @@ export default function ResponsiveAppBar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" >
         <Toolbar>
+        <Box  className='icon-container' sx={{ display: {xs:'1rem', sm:'block'}}}>
+            <IconButton >
+              <img className='icon' src='https://cdn-icons-png.flaticon.com/128/3820/3820195.png' />
+            </IconButton>
+            
+            </Box>
           <Typography
             variant="h6"
             noWrap={false}
             component="a"
             href="/"
-            sx={{ flexGrow: 1, display: { xs: '1rem', sm: 'block' }, margin: 1}}
+            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' }, margin: 1}}
             style={{color: 'white'}}
           >
-            FMP
+            Financial Pulse
           </Typography>
+          
           <Search>
             <SearchIconWrapper>
-              <SearchIcon />
+              <SearchIcon className='search-icon' />
             </SearchIconWrapper>
             <StyledInputBase
               placeholder="Ticker Search"

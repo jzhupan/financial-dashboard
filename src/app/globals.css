@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Dosis&family=Red+Hat+Display&display=swap');
+
+
+*{
+    font-family: 'Croissant One', cursive;
+    font-family: 'Dosis', sans-serif;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
 h1{
     color: black;
     display: inline-block;
@@ -30,3 +39,11 @@ a:-webkit-any-link {
     cursor: pointer;
     text-decoration: none;
 }
+
+.icon{
+    height: 30px;
+    margin: -15% auto;
+    color: white;
+    filter: invert(1);
+}
+
