@@ -1,0 +1,36 @@
+{
+  "name": "dashboard",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@fontsource/roboto": "^5.0.8",
+    "@mui/icons-material": "^5.14.6",
+    "@mui/material": "^5.14.7",
+    "@mui/styled-engine-sc": "^5.14.7",
+    "@mui/x-data-grid": "^6.12.1",
+    "axios": "^1.5.0",
+    "chart.js": "^4.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "firebase": "^10.5.0",
+    "next": "^13.4.19",
+    "react": "^18.2.0",
+    "react-chartjs-2": "^5.2.0",
+    "react-dom": "^18.2.0",
+    "recharts": "^2.8.0",
+    "styled-components": "^5.3.11",
+    "firebase-frameworks": "^0.10.4",
+    "firebase-functions": "^4.3.0",
+    "firebase-admin": "^11.0.1"
+  },
+  "description": "I have been actively enhancing my proficiency in front-end technologies, which include JavaScript, HTML5, CSS3, React, Next.js, JSX syntax, Material UI, Recharts, and Financial Modeling Prep’s API. Through this project, I had the opportunity to build a dynamic Financial Dashboard from scratch, practice API integration using Axios, resolve numerous CSS issues while working with Material UI components, and experiment with styling customization.",
+  "main": "server.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": "18"
+  }
+}

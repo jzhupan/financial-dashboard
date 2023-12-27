@@ -28,8 +28,8 @@ yarn-error.log*
 .env*.local
 
 # firebase
-# /firebase.js
-# firebase_setup
+/firebase.js
+
 
 # vercel
 .vercel

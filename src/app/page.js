@@ -5,7 +5,6 @@ import PageLayout from "./Global/PageLayout"
 
 
 
-
 export default function Home() {
 
   return (
