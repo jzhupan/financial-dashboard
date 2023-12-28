@@ -1,6 +1,6 @@
 # About my Financial Dashboard
 
-Developed a user-centric homepage and a dynamic router page for the efficient display of stocks and financial data, sourced from Financial Modeling Prep's API. Engineered a feature-rich interface. All the components in my React app incorporate real-time stock data, including prices, percentage changes, and other relevant information for the respective tickers.
+Developed a user-centric homepage and a dynamic router page for the efficient display of stocks and financial data, sourced from Financial Modeling Prep's API. Engineered a feature-rich interface. All the components in my React app incorporate real-time stock data, including prices, percentage changes, Price change graphs, and other relevant information for the respective tickers.
 
 # Demo GIF
 ![Demo](https://github.com/jzhupan/financial-dashboard/blob/main/src/app/assets/financial-pulse-demo.gif)
