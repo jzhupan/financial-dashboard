@@ -2,7 +2,8 @@
 
 I have been actively enhancing my proficiency in front-end technologies, which include JavaScript, HTML5, CSS3, React, Next.js, JSX syntax, Material UI, Recharts, and Financial Modeling Prep’s API. Through this project, I had the opportunity to build a dynamic Financial Dashboard from scratch, practice API integration using Axios, resolve numerous CSS issues while working with Material UI components, and experiment with styling customization.
 
-![Demo](/src/app/assets/financial-pulse-demo.gif)
+# Demo
+![Demo](https://github.com/jzhupan/financial-dashboard/blob/main/src/app/assets/financial-pulse-demo.gif)
 
 ## Key Acomplisments:
 
